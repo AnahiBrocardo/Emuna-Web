@@ -1,19 +1,20 @@
-<div class="w-full text-left pl-4 md:pl-8 mb-8" style="margin-top: 120px;">
-    <h2 class="text-3xl font-semibold text-gray-800 dark:text-gray-200">
+<div class="w-full text-left pl-4 md:pl-4 mb-8" style="margin-top: 120px;">
+    <h2 class="text-3xl font-semibold text-[#47403f]">
         About me
     </h2>
 </div>
-<div class="flex flex-col md:flex-row items-center relative pl-4 md:pl-8">
+
+<div class="flex flex-col md:flex-row items-center relative pl-4 md:pl-6 lg:pl-10">
     <div class="relative flex flex-col items-center md:items-start">
         <!-- Imagen superior sin bordes redondeados ni forma deformada -->
         <img src="../../../../assets/about-me/teo.jpg" alt="Teo" 
-             class="w-56 md:w-64 lg:w-80 max-h-80 md:max-h-96 object-cover shadow-md self-start opacity-0 translate-x-[-100px] transition-all duration-[3000ms] ease-in-out hover:opacity-100 hover:translate-x-0"
-             onload="this.classList.remove('opacity-0', 'translate-x-[-100px]')">
+        class="w-48 md:w-56 lg:w-64 max-h-72 md:max-h-80 object-cover shadow-md self-start opacity-0 translate-x-[-100px] transition-all duration-[3000ms] ease-in-out hover:opacity-100 hover:translate-x-0"
+        onload="this.classList.remove('opacity-0', 'translate-x-[-100px]')">
 
-        <!-- Imagen inferior sin bordes redondeados ni forma deformada -->
+        <!-- Imagen inferior sin recortar -->
         <img src="../../../../assets/about-me/kira.jpeg" alt="Kira" 
-             class="w-56 md:w-64 lg:w-80 shadow-md ml-16 md:ml-24 lg:ml-32 -mt-8 lg:-mt-12 opacity-0 translate-x-[-100px] transition-all duration-[3000ms] ease-in-out hover:opacity-100 hover:translate-x-0"
-             onload="this.classList.remove('opacity-0', 'translate-x-[-100px]')">
+        class="w-50 md:w-60 lg:w-72 max-h-72 md:max-h-80 object-contain shadow-md ml-16 md:ml-24 lg:ml-32 -mt-6 lg:-mt-8 opacity-0 translate-x-[-100px] transition-all duration-[3000ms] ease-in-out hover:opacity-100 hover:translate-x-0"
+        onload="this.classList.remove('opacity-0', 'translate-x-[-100px]')">
 
         <!-- Contenedor para el texto centrado entre las imágenes -->
         <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 text-center text-gray-500 dark:text-gray-400">
@@ -23,8 +24,7 @@
         </div>
     </div>
 
-    <!-- Contenedor de texto al lado -->
-    <div class="mt-8 md:mt-0 md:ml-16 lg:ml-24 text-center md:text-left p-4 md:p-8 max-w-2xl">
+    <div class="mt-8 md:mt-0 md:ml-8 lg:ml-12 text-center md:text-left p-4 md:p-6 max-w-xl lg:max-w-3xl md:pr-2 lg:pr-4">
         <p class="text-lg text-gray-600 leading-relaxed mb-4">
             ¡Hola! Soy Mariana, una apasionada del crochet. Nací y vivo en Argentina, donde además estudio Licenciatura en Ciencias Biológicas.
         </p>
