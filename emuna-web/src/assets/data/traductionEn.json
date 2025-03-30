@@ -1,0 +1,40 @@
+{
+    "Products": [ 
+  {
+    "id": 1,
+    "title": "Pink dinosaur",
+    "description": "Description pink dinosaur.",
+    "image": "assets/products/pink-dinosaur.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Hedgehog with a heart",
+    "description": "Description Hedgehog with Heart",
+    "image": "assets/products/hedgehog-heart.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Hen with flower",
+    "description": "Description hen with flower",
+    "image": "assets/products/hen-flower.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Elephant",
+    "description": "Description elephant",
+    "image": "assets/products/elephant.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Dinosaur",
+    "description": "Description dinosaur",
+    "image": "assets/products/dinosaur.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Fungus",
+    "description": "Description fungus",
+    "image": "assets/products/fungus.jpg"
+  }
+]
+}

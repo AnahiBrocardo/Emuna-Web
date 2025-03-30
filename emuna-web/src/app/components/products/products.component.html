@@ -1,0 +1,22 @@
+<section>
+    <div class="w-full text-center mb-20 mt-16">
+      <h2 class="text-3xl font-semibold text-[#47403f]">
+        Products
+      </h2>
+    </div>
+  
+    <div class="grid grid-cols-3 gap-10 px-4 justify-center mx-auto max-w-screen-lg">
+        <div *ngFor="let product of products" class="w-full max-w-xs bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 p-4">
+          <a href="#">
+            <img class="rounded-t-lg w-full h-72 object-cover" [src]="product.image" alt="{{ product.title }}" />
+          </a>
+          <div class="p-4">
+            <a href="#">
+              <h5 class="mb-2 text-xl font-semibold text-[#47403f]">{{ product.title }}</h5>
+            </a>
+            <p class="mb-3 text-gray-700 dark:text-gray-400">{{ product.description }}</p>
+          </div>
+        </div>
+      </div>
+  </section>
+  

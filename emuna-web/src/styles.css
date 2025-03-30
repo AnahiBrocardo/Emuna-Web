@@ -8,4 +8,5 @@ body {
     font-optical-sizing: auto;
     font-weight: 400; /* Puedes cambiar entre 100 y 900 */
     font-style: normal;
+    background-color:rgba(252, 250, 245, 0.99) !important;
   }

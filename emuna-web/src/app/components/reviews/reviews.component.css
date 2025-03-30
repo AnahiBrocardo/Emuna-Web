@@ -1,0 +1,10 @@
+/* Personalizar la barra de desplazamiento horizontal */
+::-webkit-scrollbar {
+    height: 4px; /* Reducir la altura de la barra */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* Color más tenue */
+  }
+ 
+  
