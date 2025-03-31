@@ -14,4 +14,8 @@ export class NavbarComponent {
   navigateToProducts(): void {
     this.router.navigate(['/products']);
   }
+
+  navigateToContact():void{
+    this.router.navigate(['/contact']);
+  }
 }
