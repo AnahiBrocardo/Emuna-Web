@@ -18,7 +18,7 @@
 
             <div>
                 <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-                <input type="text" formControlName="subject" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder= "Please specify the reason for your inquiry" required>
+                <input type="text" formControlName="subject" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder= "Please specify if it's custom pattern design, pattern purchase, testing of patterns,  or a general inquiry." required>
                 
                 <div *ngIf="contactForm.controls['subject'].touched && contactForm.controls['subject'].invalid" class="text-red-500 text-sm mt-1">
                     <div *ngIf="contactForm.controls['subject'].hasError('required')">Subject is required.</div>
@@ -41,10 +41,23 @@
             <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#D85A8A] sm:w-fit hover:bg-[#C33D6D] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#FAEDEB] dark:hover:bg-[#F5D0D8] dark:focus:ring-blue-800">
                 Send message
               </button>
+
+              <div>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-grey-900" for="file_input">Upload file</label>
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-blue-800 hover:bg-blue-500 text-white focus:outline-none dark:bg-blue-700 dark:border-blue-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">PNG or JPG (MAX. 800x400px).</p>
+                             
+            </div>
+            
         </form>
         <p class="text-sm text-gray-800 mt-4">
         *If for any reason you can't submit your inquiry, please send it to 
         <a href="mailto:somosemuna0@gmail.com" class="text-grey-900 font-bold hover:text-gray-700">somosemuna0&#64;gmail.com</a>
         </p>
+
+
+       
+  
+        <!--Poner para adjuntar imagenes , aclarando que es solo para diseño de patrones o un testeo!!! verificar que sea imagen OPCIONAL jpg , png -->
     </div>
 </section>
