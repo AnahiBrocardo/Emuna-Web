@@ -18,4 +18,8 @@ export class NavbarComponent {
   navigateToContact():void{
     this.router.navigate(['/contact']);
   }
+
+  navigateToPatterns():void{
+    this.router.navigate(['/patterns']);
+  }
 }

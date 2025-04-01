@@ -1,24 +1,35 @@
-<footer class="bg-[#47403f] text-white py-8 mt-8">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center">
-        <div>
-          <ul class="space-y-2 mt-4">
-            <li><a href="https://www.tiktok.com/@emuna.crochet1" target="_blank" class="hover:underline">TikTok: emuna.crochet1</a></li>
-            <li><a href="https://www.instagram.com/emuna.crochet" target="_blank" class="hover:underline">Instagram: emuna.crochet</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <p class="text-lg font-semibold">Contacto:</p>
-          <p class="mt-4">
-            <a href="mailto:somosemuna0@gmail.com" class="hover:underline">somosemuna0 gmail.com</a>
-          </p>
-        </div>
+<footer class="bg-[#47403f] text-white py-8 px-20 mt-8">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <div>
+        <ul class="flex space-x-6 mt-4">
+          <li>
+            <a href="https://www.tiktok.com/@emuna.crochet1" target="_blank" class="hover:underline">
+              <i class="fa-brands fa-tiktok fa-xl" style="color: #ffffff;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/emuna.crochet" target="_blank" class="hover:underline">
+              <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ravelry.com/designers/emuna-mariana" target="_blank" class="hover:underline">
+              <i class="fa-brands fa-ravelry fa-xl" style="color: #ffffff;"></i>
+            </a>
+          </li>
+        </ul>
       </div>
       
-      <div class="text-center mt-8">
-        <p class="text-sm">Emuna © 2025</p>
+      <div>
+        <a (click)="navigateToContact()" target="_blank" class="text-lg font-semibold mt-4 text-lg font-semibold hover:underline cursor-pointer">
+          Contacto
+        </a>
       </div>
     </div>
-  </footer>
-  
+    
+    <div class="text-center mt-8">
+      <p class="text-sm">Emuna © 2025</p>
+    </div>
+  </div>
+</footer>
