@@ -1,0 +1,152 @@
+{ 
+    "Navbar": {
+    "home": "Home",
+    "services": "Services",
+    "freePatterns": "Free Patterns",
+    "questions": "Questions",
+    "aboutMe": "About me",
+    "contact": "Contact"
+  },
+    "Products": {
+      "title": "Productos",
+      "items": [
+        {
+          "id": 1,
+          "title": "Dinosaurio Rosa",
+          "description": "Un tierno dinosaurio rosa en amigurumi.",
+          "image": "assets/products/pink-dinosaur.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Erizo con Corazón",
+          "description": "Un encantador erizo sosteniendo un corazón.",
+          "image": "assets/products/hedgehog-heart.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Gallo con Flor",
+          "description": "Un gallo con una hermosa flor.",
+          "image": "assets/products/rooster-flower.jpg"
+        }
+      ]
+    },
+    "AboutMe": {
+      "title": "Sobre Mí",
+      "description": "Esta sección contiene información sobre mí y mi trabajo."
+    },
+    "Questions": {
+      "title": "Preguntas",
+      "notes":"Para cualquier otra consulta, por favor visita la sección de contacto",
+      "sections": {
+        "Pagos": {
+          "title": "Pagos",
+          "items": [
+            {
+              "question": "¿En qué moneda están los precios?",
+              "answer": "Si resides en Argentina, el pago se realiza en pesos argentinos (ARS) a través de Mercado Pago. Para compras internacionales, el pago se efectúa en dólares estadounidenses (USD) mediante PayPal."
+            },
+            {
+              "question": "¿Cómo puedo comprar un patrón?",
+              "answer": "Para adquirir un patrón, envía un mensaje a través de la sección de contacto (enlace) indicando el nombre del amigurumi que deseas. Te responderemos enviando un enlace de pago a la dirección de correo electrónico proporcionada en el formulario de contacto."
+            },
+            {
+              "question": "¿Cuáles son los métodos de pago disponibles?",
+              "answer": "El único medio de pago aceptado es la transferencia bancaria. Para Argentina: pagos a través de Mercado Pago. Para otros países: el único método de pago disponible es PayPal."
+            },
+            {
+                "question":"¿Puedo comprar patrones o cursos desde el extranjero?",
+                "answer": "Sí, puedes comprar patrones y cursos desde cualquier país. Solo debes seguir las indicaciones de pago y realizar la transacción exclusivamente a través de PayPal."
+            },
+            {
+                "question":"¿Cómo se realiza el pago por el testeo de patrones?",
+                "answer":" Para solicitar el testeo de un patrón, envía un mensaje en la sección de contacto (enlace) indicando el nombre del amigurumi. Te enviaremos un enlace de pago al correo electrónico registrado en el formulario de contacto. Es importante asegurarte de recibir la confirmación del pago"
+            },
+            {
+                "question": "¿Cómo se realiza paga el diseño de patrones?",
+                "answer":" Para el diseño de patrones, se requiere un adelanto del 50% del costo total como seña antes de comenzar el trabajo."
+            },
+            {
+                "question": "¿Cuáles son los costos?",
+                "answer":" El precio de los patrones varía según el diseño, la complejidad y el tamaño del amigurumi, así como el proceso de testeo. El diseño de patrones tiene un costo mayor que el testeo, ya que implica más trabajo y personalización."
+            }
+          ]
+        },
+        "Patrones": {
+          "title": "Patrones",
+          "items": [
+            {
+              "question": "¿Qué incluye un patrón?",
+              "answer": "Recibirás un archivo PDF con: lista de materiales, abreviaciones de los puntos, instrucciones detalladas con fotos del proceso y explicación de puntos básicos."
+            },
+            {
+              "question": "¿Cuándo recibiré mi patrón?",
+              "answer": "Después de realizar el pago y enviar el comprobante, el patrón en formato PDF será enviado a tu correo electrónico."
+            },
+            {
+                "question":"¿Dónde encuentro mi patrón?",
+                "answer":" El patrón se enviará por correo electrónico una vez que se haya confirmado el pago."
+            },
+            {
+                "question":"¿Los patrones tienen fecha de caducidad?",
+                "answer":"No, una vez que lo recibes por correo, puedes descargarlo tantas veces como quieras."
+            },
+            {
+                "question":"¿En qué idioma están disponibles los patrones?",
+                "answer":" Los patrones están disponibles en español e inglés."
+            },
+            {
+                "question":"¿Los patrones incluyen fotos?",
+                "answer":" Sí, todos los patrones incluyen imágenes del proceso de creación dentro del PDF."
+            },
+              {
+                  "question":"¿Los patrones tienen fecha de caducidad?",
+                  "answer":"No, una vez que lo recibes por correo, puedes descargarlo tantas veces como quieras."
+              },
+              {
+                  "question":"¿En qué idioma están disponibles los patrones?",
+                  "answer":" Los patrones están disponibles en español e inglés."
+              },
+              {
+                  "question":"¿Los patrones incluyen fotos?",
+                  "answer":" Sí, todos los patrones incluyen imágenes del proceso de creación dentro del PDF."
+              },
+              {
+                "question":"¿Cómo descargo un patrón gratuito?",
+                "answer":"Dirígete a la barra de navegación, selecciona 'Servicios' y haz clic en 'Patrones Gratuitos', luego presiona el botón de descarga y podrás obtener el patrón en formato PDF. Puedes descargarlo tantas veces como desees."
+              }
+          ]
+        },
+        "PatternDesign": {
+            "title": "Diseño de patrones",
+            "items": [
+              {
+                "question": "¿Cómo solicito un diseño personalizado?",
+                "answer": " En el formulario de contacto, especifica en el asunto que solicitas un diseño personalizado. En el cuerpo del mensaje, proporciona una descripción detallada del diseño o adjunta una imagen ilustrativa (foto guía). Nos pondremos en contacto contigo a través del correo proporcionado."
+              },
+              {
+                "question": "¿Qué recibiré al solicitar un diseño de patrón?",
+                "answer": " Recibirás un PDF con: instrucciones detalladas, fotos del proceso de creación, imágenes del producto final y video sin editar del proceso (no es un video tutorial paso a paso)."
+              },
+              {
+                  "question":"¿Cuánto tiempo tarda en entregarse un diseño de patrón?",
+                  "answer":"Una vez que envíes los detalles del diseño, recibirás un correo de confirmación con un tiempo estimado de entrega. Se requiere un adelanto del 50% del costo, adjuntando el comprobante de pago."
+              }
+            ]
+      },
+      "PatternTesting": {
+          "title": "Testeo de Patrones",
+          "items": [
+            {
+              "question": "¿Cómo solicito el testeo de un patrón?",
+              "answer": "Completa el formulario en la sección de contacto, adjuntando una foto del producto que deseas testear. Recibirás un correo de confirmación con un enlace de pago y el tiempo estimado de trabajo. Luego, deberás enviar el patrón a testear."
+            },
+            {
+              "question": "¿Qué recibiré si solicito el servicio de testeo?",
+              "answer": " Recibirás: fotos del producto terminado, un video corto (sin editar) del producto terminado, y un pdf con notas y comentarios sobre el patrón."
+            }
+          ]
+    }
+    }
+  }
+}
+  

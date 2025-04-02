@@ -1,40 +1,139 @@
 {
-    "Products": [ 
-  {
-    "id": 1,
-    "title": "Pink dinosaur",
-    "description": "Description pink dinosaur.",
-    "image": "assets/products/pink-dinosaur.jpg"
+  "Navbar": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "freePatterns": "Patrones Gratis",
+    "questions": "Preguntas",
+    "aboutMe": "Sobre mí",
+    "contact": "Contacto"
   },
-  {
-    "id": 2,
-    "title": "Hedgehog with a heart",
-    "description": "Description Hedgehog with Heart",
-    "image": "assets/products/hedgehog-heart.jpg"
+  "Products": {
+      "title": "Products",
+      "items": [
+          {
+              "id": 1,
+              "title": "Pink Dinosaur",
+              "description": "A cute pink dinosaur in amigurumi.",
+              "image": "assets/products/pink-dinosaur.jpg"
+          },
+          {
+              "id": 2,
+              "title": "Hedgehog with Heart",
+              "description": "A charming hedgehog holding a heart.",
+              "image": "assets/products/hedgehog-heart.jpg"
+          },
+          {
+              "id": 3,
+              "title": "Rooster with Flower",
+              "description": "A rooster with a beautiful flower.",
+              "image": "assets/products/rooster-flower.jpg"
+          }
+      ]
   },
-  {
-    "id": 3,
-    "title": "Rooster with flower",
-    "description": "Description rooster with flower",
-    "image": "assets/products/rooster-flower.jpg"
+  "AboutMe": {
+      "title": "About Me",
+      "description": "This section contains information about me and my work."
   },
-  {
-    "id": 4,
-    "title": "Elephant",
-    "description": "Description elephant",
-    "image": "assets/products/elephant.jpg"
-  },
-  {
-    "id": 5,
-    "title": "Dinosaur",
-    "description": "Description dinosaur",
-    "image": "assets/products/dinosaur.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Fungus",
-    "description": "Description fungus",
-    "image": "assets/products/fungus.jpg"
+  "Questions": {
+      "title": "Questions",
+      "notes": "For any other inquiries, please visit the contact section ",
+      "sections": {
+          "Payments": {
+              "title": "Payments",
+              "items": [
+                  {
+                      "question": "What currency are the prices in?",
+                      "answer": "If you are in Argentina, payments are made in Argentine Pesos (ARS) via Mercado Pago. For international purchases, payments are made in US Dollars (USD) via PayPal."
+                  },
+                  {
+                      "question": "How can I buy a pattern?",
+                      "answer": "To purchase a pattern, send a message through the contact section (link) specifying the name of the amigurumi you want. We will respond by sending a payment link to the email address provided in the contact form."
+                  },
+                  {
+                      "question": "What payment methods are available?",
+                      "answer": "The only accepted payment method is bank transfer. In Argentina: payments are made through Mercado Pago. For other countries: the only available payment method is PayPal."
+                  },
+                  {
+                      "question": "Can I buy patterns or courses from abroad?",
+                      "answer": "Yes, you can buy patterns and courses from any country. Just follow the payment instructions and complete the transaction exclusively through PayPal."
+                  },
+                  {
+                      "question": "How is the payment for pattern testing made?",
+                      "answer": "To request pattern testing, send a message in the contact section (link) indicating the name of the amigurumi. We will send you a payment link to the email address registered in the contact form. It is important to ensure you receive payment confirmation."
+                  },
+                  {
+                      "question": "How is payment made for pattern design?",
+                      "answer": "For pattern design, a 50% upfront payment is required before work begins."
+                  },
+                  {
+                      "question": "What are the costs?",
+                      "answer": "The price of patterns varies depending on the design, complexity, and size of the amigurumi, as well as the testing process. Pattern design has a higher cost than testing since it involves more work and customization."
+                  }
+              ]
+          },
+          "Patterns": {
+              "title": "Patterns",
+              "items": [
+                  {
+                      "question": "What does a pattern include?",
+                      "answer": "You will receive a PDF file with: a list of materials, stitch abbreviations, detailed instructions with process photos, and an explanation of basic stitches."
+                  },
+                  {
+                      "question": "When will I receive my pattern?",
+                      "answer": "After making the payment and sending the receipt, the pattern in PDF format will be sent to your email."
+                  },
+                  {
+                      "question": "Where can I find my pattern?",
+                      "answer": "The pattern will be sent via email once payment is confirmed."
+                  },
+                  {
+                      "question": "Do patterns have an expiration date?",
+                      "answer": "No, once you receive it via email, you can download it as many times as you want."
+                  },
+                  {
+                      "question": "In what languages are the patterns available?",
+                      "answer": "Patterns are available in Spanish and English."
+                  },
+                  {
+                      "question": "Do patterns include photos?",
+                      "answer": "Yes, all patterns include images of the creation process within the PDF."
+                  },
+                  {
+                      "question": "How can I download a free pattern?",
+                      "answer": "Go to the navigation bar, select 'Services,' and click on 'Free Patterns.' Then, press the download button, and you will get the pattern in PDF format. You can download it as many times as you want."
+                  }
+              ]
+          },
+          "PatternDesign": {
+              "title": "Pattern Design",
+              "items": [
+                  {
+                      "question": "How do I request a custom design?",
+                      "answer": "In the contact form, specify in the subject that you are requesting a custom design. In the message body, provide a detailed description of the design or attach a reference image (guide photo). We will contact you via the email provided."
+                  },
+                  {
+                      "question": "What will I receive when requesting a pattern design?",
+                      "answer": "You will receive a PDF with: detailed instructions, creation process photos, images of the final product, and an unedited video of the process (not a step-by-step tutorial video)."
+                  },
+                  {
+                      "question": "How long does it take to deliver a pattern design?",
+                      "answer": "Once you submit the design details, you will receive a confirmation email with an estimated delivery time. A 50% upfront payment is required, along with proof of payment."
+                  }
+              ]
+          },
+          "PatternTesting": {
+              "title": "Pattern Testing",
+              "items": [
+                  {
+                      "question": "How do I request pattern testing?",
+                      "answer": "Fill out the form in the contact section, attaching a photo of the product you want to test. You will receive a confirmation email with a payment link and the estimated work time. Then, you must send the pattern for testing."
+                  },
+                  {
+                      "question": "What will I receive if I request the testing service?",
+                      "answer": "You will receive: photos of the finished product, a short (unedited) video of the final product, and a PDF with notes and comments about the pattern."
+                  }
+              ]
+          }
+      }
   }
-]
 }
