@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../services/translation.service';
+import { TranslateService } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { forkJoin, from } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -9,20 +12,40 @@ import { CommonModule } from '@angular/common';
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
+
 export class ProductsComponent implements OnInit{
-  products: any[] = [];
 
-  constructor(private productService: ProductService) {}
+  productsArray: any[] = [];
+  notes: string='';
+  langSubscription: any;
+  
 
-  ngOnInit(): void {
-    this.productService.getProducts().subscribe(
-      (data) => {
-        this.products = data; 
-      },
-      (error) => {
-        console.error('Error al obtener los productos', error);
-      }
-    );
+  constructor(private translationService: TranslationService,
+    private translate: TranslateService,
+    private http: HttpClient
+  ) {}
+
+    ngOnInit(): void {
+      this.loadProducts();
+
+      this.langSubscription = this.translate.onLangChange.subscribe(() => {
+        this.loadProducts();
+      });
+    }
+  
+    
+     loadProducts(): void {
+      forkJoin([
+        from(this.translationService.translate('Products.notes')),
+        from(this.translationService.translate('Products.items'))
+      ]).subscribe(([notes, products]) => {
+        this.notes = notes;
+        
+        for(let i=0; i<products.length; i++){
+         this.productsArray[i]= products[i];
+        }
+      });
+
   }
-
 }
+

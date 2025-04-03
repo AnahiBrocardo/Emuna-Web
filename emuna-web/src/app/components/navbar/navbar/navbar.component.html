@@ -13,10 +13,10 @@
       <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
         <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#faedeb] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#faedeb] dark:bg-[#faedeb] md:dark:bg-[#faedeb] dark:border-gray-700">
           <li>
-            <a href="#" class="block py-2 px-3 text-[#47403f] bg-[#faedeb] rounded-sm md:bg-transparent md:text-[#47403f] md:p-0 md:dark:text-[#47403f] dark:bg-[#faedeb] md:dark:bg-transparent hover:text-[#dd1812]" aria-current="page">Home</a>
+            <a href="#" class="block py-2 px-3 text-[#47403f] bg-[#faedeb] rounded-sm md:bg-transparent md:text-[#47403f] md:p-0 md:dark:text-[#47403f] dark:bg-[#faedeb] md:dark:bg-transparent hover:text-[#dd1812]" aria-current="page">{{ home }}</a>
           </li>
           <li>
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-[#47403f] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#dd1812] md:p-0 md:w-auto dark:text-white md:dark:hover:text-[#dd1812] dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Services <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-[#47403f] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#dd1812] md:p-0 md:w-auto dark:text-white md:dark:hover:text-[#dd1812] dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">{{services}} <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
     </svg></button>
               <div id="dropdownNavbar" class="z-10 hidden font-normal bg-[#faedeb] divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-[#faedeb] dark:divide-gray-600">
@@ -25,19 +25,38 @@
                       <a  (click)="navigateToProducts()"  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Amigurumis</a>
                     </li>
                     <li>
-                      <a (click)="navigateToProducts()" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Free Patterns</a>
+                      <a (click)="navigateToPatterns()" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{freePatterns}}</a>
                     </li>
                   </ul>
               </div>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-[#47403f] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#dd1812] md:p-0 dark:text-white md:dark:hover:text-[#dd1812] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About me</a>
+            <a href="#about-me" class="block py-2 px-3 text-[#47403f] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#dd1812] md:p-0 dark:text-white md:dark:hover:text-[#dd1812] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{{aboutMe}}</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-[#47403f] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#dd1812] md:p-0 dark:text-white md:dark:hover:text-[#dd1812] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Questions</a>
+            <a href="#" class="block py-2 px-3 text-[#47403f] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#dd1812] md:p-0 dark:text-white md:dark:hover:text-[#dd1812] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{{questions}}</a>
           </li>
           <li>
-            <a  (click)="navigateToContact()"   class="block py-2 px-3 text-[#47403f] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#dd1812] md:p-0 dark:text-white md:dark:hover:text-[#dd1812] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            <a  (click)="navigateToContact()"   class="block py-2 px-3 text-[#47403f] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#dd1812] md:p-0 dark:text-white md:dark:hover:text-[#dd1812] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{{contact}}</a>
+          </li>
+          <li>
+            <button (click)="toggleLanguage()" class="toggle-lang flex items-center space-x-2">
+              <span 
+                [class.text-[#dd1812]]="getCurrentLang() === 'es'" 
+                [class.text-gray-500]="getCurrentLang() !== 'es'" 
+                class="hover:text-[#dd1812] transition-colors"
+              >
+                ES
+              </span> 
+              <span class="text-gray-500">|</span> 
+              <span 
+                [class.text-[#dd1812]]="getCurrentLang() === 'en'" 
+                [class.text-gray-500]="getCurrentLang() !== 'en'" 
+                class="hover:text-[#dd1812] transition-colors"
+              > 
+                EN
+              </span>
+            </button>
           </li>
         </ul>
       </div>

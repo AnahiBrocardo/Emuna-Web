@@ -1,13 +1,12 @@
-<section>
-<div class="w-full text-left pl-4 md:pl-4 mb-8" style="margin-top: 7vh;">
+<section  id="about-me">
+<div class="w-full text-left pl-4 md:pl-4 mb-4" style="margin-top: 7vh;">
     <h2 class="text-3xl font-semibold text-[#47403f]">
-        About me
+        {{title}}
     </h2>
 </div>
 
 <div class="flex flex-col md:flex-row items-center relative pl-4 md:pl-6 lg:pl-10 pr-0">
     <div class="relative flex flex-col items-center md:items-start pr-0">
-        <!-- Upper image without rounded borders or distorted shape -->
         <img src="../../../../assets/about-me/teo.jpg" alt="Teo" 
         class="w-40 md:w-48 lg:w-56 max-h-64 md:max-h-72 object-cover shadow-none self-start opacity-0 translate-x-[-100px] transition-all duration-[3000ms] ease-in-out hover:opacity-100 hover:translate-x-0"
         onload="this.classList.remove('opacity-0', 'translate-x-[-100px]')">
@@ -16,29 +15,28 @@
         class="w-45 md:w-52 lg:w-60 max-h-64 md:max-h-72 object-contain shadow-none ml-12 md:ml-16 lg:ml-20 -mt-4 lg:-mt-6 opacity-0 translate-x-[-100px] transition-all duration-[3000ms] ease-in-out hover:opacity-100 hover:translate-x-0"
         onload="this.classList.remove('opacity-0', 'translate-x-[-100px]')">
 
-        <!-- Container for the text centered between the images -->
-        <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 text-center text-gray-500 dark:text-gray-400">
+        
+        <div class="absolute bottom-[-30px] left-1/2 transform -translate-x-1/2 text-center text-gray-500 dark:text-gray-400 w-64 ">
             <span class="italic text-sm">
-                My helpers Kira and Teo
+               {{caption}}
             </span>
         </div>
     </div>
 
     <div class="mt-6 md:mt-0 md:ml-2 lg:ml-8 text-center md:text-justify p-4 md:p-4 max-w-4xl lg:max-w-4xl md:pr-0 lg:pr-0">
         <p class="text-m text-gray-600 leading-relaxed mb-4">
-            Hello! I’m Mariana, a crochet enthusiast. I was born and live in Argentina, where I am also studying a Bachelor’s in Biological Sciences.
+           {{description1}}
         </p>
         <p class="text-m text-gray-600 leading-relaxed mb-4">
-            My world is full of inspiration: I adore autumn, that magical time when nature dresses in warm colors; I enjoy walks on the beach with my friends, savoring a good cup of tea, immersing myself in movies and books, and sharing special moments with my beloved dog Kira and my kitten Teo, whom I love dearly.
+            {{description2}}
         </p>
         <p class="text-m text-gray-600 leading-relaxed mb-4">
-            I started crocheting years ago, and what began as a hobby has turned into a way of life. Each stitch, each design, is made with great affection and dedication, always aiming to convey the essence of my passion for art and creativity.
-        </p>
+            {{description3}}
         <p class="text-m text-gray-600 leading-relaxed mb-4">
-            On this page, you will find carefully designed patterns, meant for both beginners and experts to enjoy creating pieces full of charm and personality. My commitment is to offer you quality work that inspires you and makes you feel accompanied in every project.
+            {{description4}}
         </p>
         <p class="text-m text-gray-600 leading-relaxed">
-            Thank you for visiting my page! I hope you enjoy exploring my creations as much as I enjoy crocheting them for you.
+            {{description5}}
         </p>
     </div>
     

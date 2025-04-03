@@ -1,4 +1,5 @@
 #dropdownNavbar {
-    z-index: 50; /* Asegura que sea más alto que el carrusel */
-    position: absolute; /* Evita que herede estilos problemáticos */
-  }
+    z-index: 50;
+    position: absolute;
+}
+

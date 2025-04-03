@@ -1,14 +1,14 @@
-{ 
-    "Navbar": {
-    "home": "Home",
-    "services": "Services",
-    "freePatterns": "Free Patterns",
-    "questions": "Questions",
-    "aboutMe": "About me",
-    "contact": "Contact"
+{
+  "Navbar": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "freePatterns": "Patrones Gratis",
+    "questions": "Preguntas",
+    "aboutMe": "Sobre mí",
+    "contact": "Contacto"
   },
-    "Products": {
-      "title": "Productos",
+  "Products": {
+      "notes": "Las imagenes son ilustrativas, para mas informacion diríjase a ",
       "items": [
         {
           "id": 1,
@@ -29,10 +29,15 @@
           "image": "assets/products/rooster-flower.jpg"
         }
       ]
-    },
-    "AboutMe": {
-      "title": "Sobre Mí",
-      "description": "Esta sección contiene información sobre mí y mi trabajo."
+  },
+  "AboutMe": {
+        "title": "Sobre mí",
+        "description1": "¡Hola! Soy Mariana, una apasionada del crochet. Nací y vivo en Argentina, donde además estudio Licenciatura en Ciencias Biológicas.",
+        "description2": "Mi mundo está lleno de inspiración: adoro el otoño, ese momento mágico en el que la naturaleza se viste de colores cálidos; disfruto de paseos por la playa junto a mis amigas, de saborear una buena taza de té, de sumergirme en películas y libros, y de compartir momentos especiales con mi querida perrita Kira y mi gatito Teo",
+        "description3": "Empecé a tejer a crochet hace años y lo que comenzó como un hobby se transformó en una forma de vida. Cada puntada, cada diseño, está hecho con mucho cariño y dedicación, buscando siempre transmitir la esencia de mi pasión por el arte y la creatividad.",
+        "description4": "En esta página encontrarás patrones cuidadosamente diseñados, pensados para que tanto principiantes como expertos disfruten creando piezas llenas de encanto y personalidad. Mi compromiso es ofrecerte un trabajo de calidad que te inspire y te haga sentir acompañado en cada proyecto.",
+        "description5":"¡Gracias por visitar mi espacio! Espero que disfrutes explorando mis creaciones tanto como yo disfruto tejiendolas para ti.",
+        "caption": "Mis ayudantes Kira y Teo"
     },
     "Questions": {
       "title": "Preguntas",
@@ -149,4 +154,3 @@
     }
   }
 }
-  

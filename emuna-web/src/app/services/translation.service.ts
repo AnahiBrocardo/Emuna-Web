@@ -6,20 +6,24 @@ import { firstValueFrom, map, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TraductionService {
+export class TranslationService {
   private currentLang = 'en';
 
   langChange$: any;
   constructor(private translateService: TranslateService, private http: HttpClient) {
+    const savedLang = localStorage.getItem('language') || 'en';
+    this.currentLang = savedLang;
+
     this.translateService.setDefaultLang('en');
     this.translateService.use('en');
-
+     
     this.loadTranslations('en');
     this.loadTranslations('es');
   }
 
   async setLang(lang: string): Promise<void> {
     this.translateService.use(lang);
+    localStorage.setItem('language', lang);
     await this.loadTranslations(lang);
   }
 
@@ -29,7 +33,7 @@ export class TraductionService {
   }
 
   getCurrentLang(): string {
-    return this.translateService.currentLang || 'es';
+    return this.translateService.currentLang || 'en';
   }
 
   private async loadTranslations(lang: string): Promise<void> {

@@ -1,14 +1,14 @@
-{
-  "Navbar": {
-    "home": "Inicio",
-    "services": "Servicios",
-    "freePatterns": "Patrones Gratis",
-    "questions": "Preguntas",
-    "aboutMe": "Sobre mí",
-    "contact": "Contacto"
+{ 
+    "Navbar": {
+    "home": "Home",
+    "services": "Services",
+    "freePatterns": "Free Patterns",
+    "questions": "Questions",
+    "aboutMe": "About me",
+    "contact": "Contact"
   },
-  "Products": {
-      "title": "Products",
+    "Products": {
+      "notes": "The images are illustrative. For more information, ",
       "items": [
           {
               "id": 1,
@@ -29,10 +29,15 @@
               "image": "assets/products/rooster-flower.jpg"
           }
       ]
-  },
-  "AboutMe": {
+    },
+    "AboutMe": {
       "title": "About Me",
-      "description": "This section contains information about me and my work."
+      "description1": "Hello! I’m Mariana, a crochet enthusiast. I was born and live in Argentina, where I am also studying a Bachelor’s in Biological Sciences..",
+      "description2": "My world is full of inspiration: I adore autumn, that magical time when nature dresses in warm colors; I enjoy walks on the beach with my friends, savoring a good cup of tea, immersing myself in movies and books, and sharing special moments with my beloved dog Kira and my kitten Teo.",
+      "description3": "I started crocheting years ago, and what began as a hobby has turned into a way of life. Each stitch, each design, is made with great affection and dedication, always aiming to convey the essence of my passion for art and creativity.",
+      "description4": "On this page, you will find carefully designed patterns, meant for both beginners and experts to enjoy creating pieces full of charm and personality. My commitment is to offer you quality work that inspires you and makes you feel accompanied in every project.",
+      "description5": "Thank you for visiting my page! I hope you enjoy exploring my creations as much as I enjoy crocheting them for you.",
+      "caption":"My helpers Kira and Teo"
   },
   "Questions": {
       "title": "Questions",
@@ -136,4 +141,6 @@
           }
       }
   }
+    
 }
+  
