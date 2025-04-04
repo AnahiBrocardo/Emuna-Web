@@ -54,6 +54,10 @@ export class NavbarComponent implements OnInit{
   navigateToPatterns():void{
     this.router.navigate(['/patterns']);
   }
+
+  navigateToQuestions(): void{
+    this.router.navigate(['/questions']);
+  }
   
   getCurrentLang(): string {
     return this.translationService.getCurrentLang();
