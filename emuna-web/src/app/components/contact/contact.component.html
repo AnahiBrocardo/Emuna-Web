@@ -1,57 +1,57 @@
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 class="text-3xl font-semibold text-[#47403f] text-center ">
-            Contact
+            {{title}}
           </h2>
         <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"></p>
      
         <form [formGroup]="contactForm" (ngSubmit)="send()" class="space-y-8">
             <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                <input formControlName="email" type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="example@mail.com" required>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{emailLabel}}</label>
+                <input formControlName="email" type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-600 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="example@mail.com" required>
                 
                 <div *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].invalid" class="text-red-500 text-sm mt-1">
-                    <div *ngIf="contactForm.controls['email'].hasError('required')">Email is required.</div>
-                    <div *ngIf="contactForm.controls['email'].hasError('email')">Invalid email format.</div>
+                    <div *ngIf="contactForm.controls['email'].hasError('required')">{{emailRequired}}.</div>
+                    <div *ngIf="contactForm.controls['email'].hasError('email')">{{emailInvalid}}.</div>
                 </div>
             </div>
 
             <div>
-                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-                <input type="text" formControlName="subject" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder= "Please specify if it's custom pattern design, pattern purchase, testing of patterns,  or a general inquiry." required>
+                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{subjectLabel}}</label>
+                <input type="text" formControlName="subject" id="subject" class="block p-3 w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder= {{subjectLabel}} required>
                 
                 <div *ngIf="contactForm.controls['subject'].touched && contactForm.controls['subject'].invalid" class="text-red-500 text-sm mt-1">
-                    <div *ngIf="contactForm.controls['subject'].hasError('required')">Subject is required.</div>
-                    <div *ngIf="contactForm.controls['subject'].hasError('minlength')">Subject must be at least 5 characters long.</div>
-                    <div *ngIf="contactForm.controls['subject'].hasError('pattern')">Subject must have at least 5 non-space characters.</div>
+                    <div *ngIf="contactForm.controls['subject'].hasError('required')">{{subjectRequired}}.</div>
+                    <div *ngIf="contactForm.controls['subject'].hasError('minlength')">{{subjectMinLenght}}.</div>
+                    <div *ngIf="contactForm.controls['subject'].hasError('pattern')">{{subjectMinCharacters}}</div>
                 </div>
             </div>
 
             <div class="sm:col-span-2">
-                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                <textarea id="message" formControlName="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">{{commentLabel}}</label>
+                <textarea id="message" formControlName="message" rows="6" class="block p-2.5 w-full text-sm text-gray-600 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder={{commentPlaceholder}}></textarea>
                 
                 <div *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].invalid" class="text-red-500 text-sm mt-1">
-                    <div *ngIf="contactForm.controls['message'].hasError('required')">Message is required.</div>
-                    <div *ngIf="contactForm.controls['message'].hasError('minlength')">Message must be at least 10 characters long.</div>
-                    <div *ngIf="contactForm.controls['message'].hasError('pattern')">Message must have at least 10 non-space characters.</div>
+                    <div *ngIf="contactForm.controls['message'].hasError('required')">{{commentRequired}}.</div>
+                    <div *ngIf="contactForm.controls['message'].hasError('minlength')">{{commentMinLenght}}.</div>
+                    <div *ngIf="contactForm.controls['message'].hasError('pattern')">{{commentMinCharacters}}.</div>
                 </div>
             </div>
 
             <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#D85A8A] sm:w-fit hover:bg-[#C33D6D] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#FAEDEB] dark:hover:bg-[#F5D0D8] dark:focus:ring-blue-800">
-                Send message
-              </button>
+                {{sendMesagge}}
+            </button>
 
               <div>
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-grey-900" for="file_input">Upload file</label>
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-grey-900" for="file_input">{{file}}</label>
                 <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-blue-800 hover:bg-blue-500 text-white focus:outline-none dark:bg-blue-700 dark:border-blue-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file">
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">PNG or JPG (MAX. 800x400px).</p>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-500" id="file_input_help">PNG or JPG (MAX. 800x400px).</p>
                              
             </div>
             
         </form>
         <p class="text-sm text-gray-800 mt-4">
-        *If for any reason you can't submit your inquiry, please send it to 
+        {{notes}}
         <a href="mailto:somosemuna0@gmail.com" class="text-grey-900 font-bold hover:text-gray-700">somosemuna0&#64;gmail.com</a>
         </p>
 

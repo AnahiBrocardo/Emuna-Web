@@ -39,6 +39,26 @@
         "description5":"¡Gracias por visitar mi espacio! Espero que disfrutes explorando mis creaciones tanto como yo disfruto tejiendolas para ti.",
         "caption": "Mis ayudantes Kira y Teo"
     },
+    "Contact":{
+        "title": "Contacto",
+        "emailLabel": "Correo electronico",
+        "emailRequired": "Email requerido",
+        "emailInvalid": "Formato invalido",
+        "subjectLabel": "Asunto",
+       "subjectPlaceholder": "Por favor, especificá si se trata de un diseño de patrón personalizado, compra de patrones, prueba de patrones o una consulta general",
+       "subjectRequired": "Asunto requerido",
+       "subjectMinLenght":"El asunto debe contener como mínimo 5 caracteres",
+       "subjectMinCharacters":"El asunto debe incluir al menos 5 caracteres que no sean espacios en blanco",
+       "commentLabel": "Mensaje",
+       "commentPlaceholder": "Deje un mensaje...",
+       "commentRequired": "Debe ingresar un mensaje",
+       "commentMinLenght":"El mensaje debe contener como mínimo 10 caracteres",
+       "commentMinCharacters":"El mensaje debe incluir al menos 10 caracteres que no sean espacios en blanco",
+       "sendMesagge": "Enviar",
+       "file": "Cargar archivo",
+       "notes": "*Si por algún motivo no podés enviar tu consulta, podés enviarla a"
+
+  },
     "Questions": {
       "title": "Preguntas",
       "notes":"Para cualquier otra consulta, por favor visita la sección de contacto",

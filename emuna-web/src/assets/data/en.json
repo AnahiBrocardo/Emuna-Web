@@ -39,6 +39,26 @@
       "description5": "Thank you for visiting my page! I hope you enjoy exploring my creations as much as I enjoy crocheting them for you.",
       "caption":"My helpers Kira and Teo"
   },
+  "Contact":{
+        "title": "Contact",
+        "emailLabel": "Your email",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email format",
+        "subjectLabel": "Subject",
+       "subjectPlaceholder": "Please specify if it's custom pattern design, pattern purchase, testing of patterns,  or a general inquiry",
+       "subjectRequired": "Subject is required",
+       "subjectMinLenght":"Subject must be at least 5 characters long",
+       "subjectMinCharacters":"Subject must have at least 5 non-space characters",
+       "commentLabel": "Message",
+       "commentPlaceholder": "Please specify if it's custom pattern design, pattern purchase, testing of patterns,  or a general inquiry",
+       "commentRequired": "Message is required",
+       "commentMinLenght":"Message must be at least 10 characters long",
+       "commentMinCharacters":"Message must have at least 10 non-space characters",
+       "sendMesagge": "Send message",
+       "file": "Upload file",
+       "notes": "*If for any reason you can't submit your inquiry, please send it to"
+
+  },
   "Questions": {
       "title": "Questions",
       "notes": "For any other inquiries, please visit the contact section ",
