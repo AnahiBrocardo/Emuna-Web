@@ -2,42 +2,35 @@
     
     <div class="relative h-[400px] overflow-hidden md:h-[500px] shadow-lg shadow-black/50">
       
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="relative w-full h-full">
-                <img src="../../../../assets/carrousel/imagen 1.jfif" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."
-                     style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(0, 0, 0, 0.1);">
-               
-                <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
-                    <h3 class="text-xl mb-2">Pattern Testing</h3>
-                    <p class="text-center">We conduct thorough tests to ensure the effectiveness of your patterns.</p>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="relative w-full h-full">
-                <img src="../../../../assets/carrousel/imagen2.jfif" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."
-                     style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(0, 0, 0, 0.1);">
-              
-                <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
-                    <h3 class="text-xl mb-2">Pattern Design</h3>
-                    <p class="text-center">We design custom patterns or the ones you already have on the page.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <div class="relative w-full h-full">
-                <img src="../../../../assets/carrousel/imagen 3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."
-                     style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -4px 6px rgba(0, 0, 0, 0.1);">
-                
-                <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
-                    <h3 class="text-xl mb-2">Pattern Sales</h3>
-                    <p class="text-center">Buy exclusive patterns for your project or business.</p>
-                </div>
-            </div>
-        </div>
+<div class="hidden duration-700 ease-in-out" data-carousel-item>
+    <div class="relative w-full h-full">
+      <img src="../../../../assets/carrousel/imagen 1.jfif">
+      <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
+        <h3 class="text-xl mb-2">{{ slides[0].title }}</h3>
+        <p class="text-center">{{ slides[0].description }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+    <div class="relative w-full h-full">
+      <img src="../../../../assets/carrousel/imagen2.jpg">
+      <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
+        <h3 class="text-xl mb-2">{{ slides[1].title }}</h3>
+        <p class="text-center">{{ slides[1].description }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hidden duration-700 ease-in-out" data-carousel-item>
+    <div class="relative w-full h-full">
+      <img src="../../../../assets/carrousel/imagen 3.jpg">
+      <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
+        <h3 class="text-xl mb-2">{{ slides[2].title }}</h3>
+        <p class="text-center">{{ slides[2].description }}</p>
+      </div>
+    </div>
+  </div>
     </div>
 
   
