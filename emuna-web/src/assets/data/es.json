@@ -38,7 +38,24 @@
         "description4": "En esta página encontrarás patrones cuidadosamente diseñados, pensados para que tanto principiantes como expertos disfruten creando piezas llenas de encanto y personalidad. Mi compromiso es ofrecerte un trabajo de calidad que te inspire y te haga sentir acompañado en cada proyecto.",
         "description5":"¡Gracias por visitar mi espacio! Espero que disfrutes explorando mis creaciones tanto como yo disfruto tejiendolas para ti.",
         "caption": "Mis ayudantes Kira y Teo"
+    }, 
+    "Services": {
+    "title": "Lo que ofrezco",
+    "items": [
+    {
+      "itemTitle": "Diseño de patrones",
+      "description": "Diseños exclusivos de patrones de crochet. Incluyen instrucciones detalladas y fotos del proceso."
     },
+    {
+      "itemTitle": "Testeo de patrones",
+      "description": "Pruedo de patrones de crochet y retroalimentación sobre el diseño, incluyendo fotos y videos del producto terminado."
+    },
+    {
+      "itemTitle": "Venta de patrones",
+      "description": "Compra de patrones de crochet en formato PDF, con listas de materiales, abreviaturas de puntos e instrucciones claras."
+    }
+  ]
+  },
     "Contact":{
         "title": "Contacto",
         "emailLabel": "Correo electronico",

@@ -1,18 +1,49 @@
+import { CommonModule } from '@angular/common';
 import {  Component, OnInit } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
+import { TranslateService } from '@ngx-translate/core';
+import { forkJoin, from } from 'rxjs';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
 export class ServicesComponent  implements OnInit {
-  constructor() {}
+  itemsArray: any[] = [];
+  title: string='';
+  langSubscription: any;
+
+  constructor(private translationService: TranslationService,
+      private translate: TranslateService
+    ) {}
 
   ngOnInit(): void {
     this.addScrollObserver();
+
+    this.loadItems();
+
+    this.langSubscription = this.translate.onLangChange.subscribe(() => {
+      this.loadItems();
+      this.addScrollObserver();
+    });
   }
+
+    loadItems(): void {
+        forkJoin([
+          from(this.translationService.translate('Services.title')),
+          from(this.translationService.translate('Services.items'))
+        ]).subscribe(([title, items]) => {
+          this.title = title;
+          
+          for(let i=0; i<items.length; i++){
+           this.itemsArray[i]= items[i];
+          }
+        });
+        console.log(this.itemsArray);
+    }
 
   addScrollObserver(): void {
     const cards = document.querySelectorAll('.service-card');
@@ -20,15 +51,15 @@ export class ServicesComponent  implements OnInit {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          // Aplica el retraso solo cuando la tarjeta es visible
+       
           setTimeout(() => {
             entry.target.classList.add('opacity-100', 'translate-y-0');
-          }, index * 500); // 200ms de retraso por cada tarjeta
+          }, index * 500); 
 
-          // Sigue observando la tarjeta para futuros triggers
+     
           observer.observe(entry.target);
         } else {
-          // Opcional: Hacer que la tarjeta vuelva a su estado inicial si sale de la vista
+          
           entry.target.classList.remove('opacity-100', 'translate-y-0');
           entry.target.classList.add('opacity-0', 'translate-y-10');
         }

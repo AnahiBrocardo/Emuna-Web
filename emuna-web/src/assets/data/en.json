@@ -39,6 +39,24 @@
       "description5": "Thank you for visiting my page! I hope you enjoy exploring my creations as much as I enjoy crocheting them for you.",
       "caption":"My helpers Kira and Teo"
   },
+  "Services":{
+   "title": "What I Offer",
+   "items":[
+    {
+    "itemTitle":"Pattern Design",
+    "description": "Exclusive crochet pattern designs. Includes detailed instructions and process photos."
+    },
+    {
+    "itemTitle":"Pattern Testing",
+    "description": "Test crochet patterns and provide feedback on the design, including photos and videos of the finished product."
+    },
+    {
+    "itemTitle":"Pattern Sales",
+    "description": "Purchase crochet patterns in PDF format, with material lists, point abbreviations, and clear instructions."
+    }
+   
+    ]
+  },
   "Contact":{
         "title": "Contact",
         "emailLabel": "Your email",
