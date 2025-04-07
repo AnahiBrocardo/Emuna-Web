@@ -21,13 +21,11 @@ export class ServicesComponent  implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    this.addScrollObserver();
 
     this.loadItems();
 
     this.langSubscription = this.translate.onLangChange.subscribe(() => {
       this.loadItems();
-      this.addScrollObserver();
     });
   }
 
@@ -41,8 +39,9 @@ export class ServicesComponent  implements OnInit {
           for(let i=0; i<items.length; i++){
            this.itemsArray[i]= items[i];
           }
+
+          setTimeout(() => this.addScrollObserver(), 0);
         });
-        console.log(this.itemsArray);
     }
 
   addScrollObserver(): void {
@@ -65,11 +64,11 @@ export class ServicesComponent  implements OnInit {
         }
       });
     }, {
-      threshold: 0.4 // Activar cuando el 20% de la tarjeta sea visible
+      threshold: 0.4 
     });
 
     cards.forEach(card => {
-      observer.observe(card); // Observa todas las tarjetas
+      observer.observe(card); 
     });
   }
 }

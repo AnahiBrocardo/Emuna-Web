@@ -8,26 +8,45 @@
     "contact": "Contact"
   },
     "Products": {
-      "notes": "The images are illustrative. For more information, ",
+      "notes": "Crochet pattern only. NOT a finished toy- For more information, ",
+      "notes2": "Please note that cancellations and refunds for digital patterns will not be accepted after purchase.",
       "items": [
           {
               "id": 1,
-              "title": "Pink Dinosaur",
-              "description": "A cute pink dinosaur in amigurumi.",
+              "title": "Pink Triceratops",
+              "description": "Travel to the world of dinosaurs with this adorable crocheted triceratops! Made with soft chenille yarn, it's perfect for cuddles or decorating any cozy space. With pastel colors, sparkling eyes, and its signature crest, it’s a sweet companion for all ages. Ideal as a gift or to add to your amigurumi collection—bring home this charming little dinosaur!",
+              "measurements":"Finished measurements: 25 cm in high (9,8 inches).",
+              "materials":"Materials:  Super soft thick chenille yarn.",
+              "skillLevel": "Skill level: Intermediate.",
               "image": "assets/products/pink-dinosaur.jpg"
           },
           {
               "id": 2,
-              "title": "Hedgehog with Heart",
-              "description": "A charming hedgehog holding a heart.",
+              "title": "Hedgehog with a Heart",
+              "description": "Discover the charm in every stitch with this adorable hedgehog amigurumi! Lovingly crocheted and holding a heart, it’s a sweet symbol of love and friendship. Perfect as a gift or decoration, this endearing piece invites you to embrace the art of crochet. Add this delightful hedgehog to your collection and let its charm steal your heart!",
+              "measurements":"Finished measurements: 11 cm (4,3 inches) in height and 8 cm (3,1 inches) at its widest point.",
+              "materials":"Materials: Medium-weight 100% cotton yarn.",
+              "skillLevel": "Skill level: Beginners.",
               "image": "assets/products/hedgehog-heart.jpg"
           },
           {
               "id": 3,
-              "title": "Rooster with Flower",
-              "description": "A rooster with a beautiful flower.",
+              "title": "Cute little rooster with a sunflower",
+              "description": "This adorable crochet rooster is ready to brighten up any space with charm and sweetness, holding a beautiful sunflower a symbol of light and happiness. Handcrafted with love and dedication, this little rooster makes the perfect gift, full of personality and warmth. Bring home this charming amigurumi rooster today!.",
+              "measurements":" Finished measurements: 6 cm (2,3 inches) in height and 7 cm (2,7 inches) at its widest point.",
+              "materials":"Materials: Medium-weight 100% cotton yarn",
+              "skillLevel": "Skill level: Beginners.",
               "image": "assets/products/rooster-flower.jpg"
-          }
+          },
+          {
+            "id": 4,
+            "title": "Dinosaur",
+            "description": "Discover the magic of this adorable seamless amigurumi dinosaur! Soft, charming, and beginner-friendly, it's the perfect companion to bring warmth and originality to any space. Add it to your collection and let its cuteness win you over!",
+            "measurements":" Finished measurements:  18 cm in high (7,0 inches).",
+            "materials":"Materials:   Super soft thick chenille yarn",
+            "skillLevel": "Skill level: Beginners.",
+            "image": "assets/products/dinosaur.jpg"
+        }
       ]
     },
     "AboutMe": {

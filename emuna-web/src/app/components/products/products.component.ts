@@ -17,6 +17,7 @@ export class ProductsComponent implements OnInit{
 
   productsArray: any[] = [];
   notes: string='';
+  notes2: string='';
   langSubscription: any;
   
 
@@ -37,9 +38,11 @@ export class ProductsComponent implements OnInit{
      loadProducts(): void {
       forkJoin([
         from(this.translationService.translate('Products.notes')),
+        from(this.translationService.translate('Products.notes2')),
         from(this.translationService.translate('Products.items'))
-      ]).subscribe(([notes, products]) => {
+      ]).subscribe(([notes, notes2, products]) => {
         this.notes = notes;
+        this.notes2=notes2;
         
         for(let i=0; i<products.length; i++){
          this.productsArray[i]= products[i];

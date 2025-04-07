@@ -5,35 +5,19 @@
         </h2>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-19">
-
-        <div class="service-card w-full max-w-sm p-4 bg-white border border-[#f0dada] rounded-lg shadow-sm dark:bg-gray-800 dark:border-[#f0dada] ml-4 opacity-0 transform translate-y-10 transition-all duration-700">
-            <a href="#" class="text-red-600">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#D96161] dark:text-white">Pattern Design</h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Exclusive crochet pattern designs. Includes detailed instructions and process photos.</p>
-
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div
+          *ngFor="let service of itemsArray"
+          class="service-card max-w-sm mx-auto p-6 border border-[#f0dada] rounded-lg shadow-md bg-transparent opacity-0 transform translate-y-10 transition-all duration-700"
+        >
+          <h1 class="text-[#D96161] text-xl font-bold mb-2">
+            {{ service.itemTitle }}
+          </h1>
+          <h2 class="text-gray-700 text-justify">
+            {{ service.description }}
+          </h2>
         </div>
-
-
-        <div class="service-card w-full max-w-sm p-4 bg-white border border-[#f0dada] rounded-lg shadow-sm dark:bg-gray-800 dark:border-[#f0dada] opacity-0 transform translate-y-10 transition-all duration-700">
-            <a href="#" class="text-red-600">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#D96161] dark:text-white">Pattern Testing</h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Test crochet patterns and provide feedback on the design, including photos and videos of the finished product.</p>
-
-        </div>
-
-  
-        <div class="service-card w-full max-w-sm p-4 bg-white border border-[#f0dada] rounded-lg shadow-sm dark:bg-gray-800 dark:border-[#f0dada] opacity-0 transform translate-y-10 transition-all duration-700">
-            <a href="#" class="text-red-600">
-                <h5 class="mb-2 text-2xl font-semibold tracking-tight text-[#D96161] dark:text-white">Pattern Sales</h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Purchase crochet patterns in PDF format, with material lists, point abbreviations, and clear instructions.</p>
-
-        </div>
-
-    </div>
+      </div>
  
     <div class="w-full h-8 mt-16 bg-gradient-to-t from-gray-300 to-transparent opacity-15"></div>
 

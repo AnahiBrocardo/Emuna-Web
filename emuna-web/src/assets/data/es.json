@@ -12,22 +12,40 @@
       "items": [
         {
           "id": 1,
-          "title": "Dinosaurio Rosa",
-          "description": "Un tierno dinosaurio rosa en amigurumi.",
+          "title": "Triceratops rosa",
+          "description": "¡Viajá al mundo de los dinosaurios con este adorable triceratops tejido a crochet! Hecho con suave hilo de felpa, es perfecto para abrazar o decorar cualquier rincón especial. Con colores pasteles, ojos brillantes y su característica cresta, es un tierno compañero para todas las edades. Ideal para regalar o sumar a tu colección de amigurumis—¡llevá a casa este encantador dinosaurio!",
+          "measurements":"Medidas finales: 25 cm de alto (9,8 pulgadas).",
+          "materials":"Materiales: Hilo de felpa grueso y súper suave.",
+          "skillLevel": "Nivel de dificultad: Intermedio.",
           "image": "assets/products/pink-dinosaur.jpg"
         },
         {
           "id": 2,
-          "title": "Erizo con Corazón",
-          "description": "Un encantador erizo sosteniendo un corazón.",
+          "title": "Erizo con un corazón",
+          "description": "¡Descubrí el encanto en cada puntada con este adorable erizo amigurumi! Tejido con amor y con un corazón entre sus manos, es un tierno símbolo de amor y amistad. Ideal como regalo o decoración, esta encantadora pieza te invita a disfrutar del arte del crochet. ¡Sumá este erizo a tu colección y dejate conquistar por su ternura!",
+          "measurements":"Medidas finales: 11 cm de alto y 8 cm en su punto más ancho (4,3 x 3,1 pulgadas).",
+          "materials":"Materiales: Hilo de algodón 100% de grosor medio.",
+          "skillLevel": "Nivel de dificultad: Principiantes.",
           "image": "assets/products/hedgehog-heart.jpg"
         },
         {
           "id": 3,
-          "title": "Gallo con Flor",
-          "description": "Un gallo con una hermosa flor.",
+          "title": "Adorable gallito con girasol",
+          "description": "Este adorable gallito tejido al crochet está listo para iluminar cualquier espacio con encanto y ternura, sosteniendo un hermoso girasol — símbolo de luz y felicidad. Hecho a mano con amor y dedicación, este pequeño gallo es el regalo perfecto, lleno de personalidad y calidez. ¡Llevá a casa este encantador amigurumi hoy mismo!",
+          "measurements":"Medidas finales: 6 cm de alto y 7 cm en su punto más ancho.",
+          "materials":"Materiales: Hilo de algodón 100% de grosor medio",
+          "skillLevel": "Nivel de dificultad: Principiantes.",
           "image": "assets/products/rooster-flower.jpg"
-        }
+        },
+        {
+          "id": 4,
+          "title": "Dinosaurio",
+          "description": "¡Descubrí la magia de este adorable dinosaurio amigurumi sin costuras! Suave, encantador y apto para principiantes, es el compañero perfecto para aportar calidez y originalidad a cualquier espacio. ¡Agregalo a tu colección y dejate conquistar por su ternura!",
+          "measurements":" Finished measurements: 18 cm de alto (7,0 pulgadas).",
+          "materials":"Materials: Hilo de chenilla grueso y súper suave",
+          "skillLevel": "Nivel de dificultad: Principiantes.",
+          "image": "assets/products/dinosaur.jpg"
+      }
       ]
   },
   "AboutMe": {
