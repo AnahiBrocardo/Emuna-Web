@@ -1,33 +1,36 @@
 <section>
-    <div class="w-full text-center mb-20 mt-16">
-        <h2 class="text-3xl font-semibold text-[#47403f]">
-          Free patterns
-        </h2>
-      </div>
+  <div class="w-full text-center mb-20 mt-16">
+    <h2 class="text-3xl font-semibold text-[#47403f]">{{ title }}</h2>
+  </div>
 
-      <div class="px-20">
-
-        <div class= "mb-20">
-        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/docs/images/blog/image-4.jpg" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-            </div>
-        </a>
-    </div>
+  <div class="px-6 md:px-32">
+    <div class="mb-20" *ngFor="let pattern of freePatterns">
+        <section
+        class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row max-w-6xl mx-auto h-full transition-transform duration-300 ease-in-out hover:scale-[1.02] hover:border-peach dark:border-gray-700 dark:bg-gray-800">
       
-    <div class= "mb-20">
-        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/docs/images/blog/image-4.jpg" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-            </div>
-        </a>
-
+        <img class="object-cover w-full h-full md:h-auto md:w-64 md:rounded-none md:rounded-s-lg md:h-full"
+             [src]="pattern.image" [alt]="pattern.title">
+        
+        <div class="flex flex-col justify-between p-4 leading-normal w-full relative">
+          <div>
+            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-700 dark:text-white">
+              {{ pattern.itemTitle }}
+            </h5>
+            <p class="mb-2 text-md text-gray-600 dark:text-gray-300">
+              {{ pattern.description }}
+            </p>
+            <p class="text-md text-gray-700 font-medium">
+              {{note}}
+            </p>
+          </div>
+          <div class="flex justify-end mt-4">
+            <button
+              class="bg-peach text-[#5c4c41] text-md px-4 py-2 rounded-full shadow-md transition-all duration-300 hover:bg-peach-300 hover:text-[#3e3028] hover:scale-105 hover:shadow-lg">
+              {{ download }}
+            </button>
+          </div>
+        </div>
+    </section>
     </div>
-
-       
-      </div>
+  </div>
 </section>

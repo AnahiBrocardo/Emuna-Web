@@ -76,6 +76,26 @@
    
     ]
   },
+  "FreePatterns":{
+   "title": "Free Patterns",
+   "download": "Download",
+   "note":"Don’t forget to share a photo when you’re done!",
+   "items":[
+    {
+    "itemTitle":"Octopus Pattern",
+    "description": "This adorable, no-sew crochet octopus is perfect for those looking for a cute and simple project! With its charming and easy design, you can turn it into a unique keychain to carry with you everywhere. Download the free pattern and start crocheting this friendly companion that is sure to bring a smile to your face.",
+    "image": "assets/patterns/images/octopus.jpg",
+    "document":"assets/patterns/pdf/octopus.pdf"
+    },
+    {
+    "itemTitle":"Little bear Pattern",
+    "description": "This little no-sew bear is the perfect project for anyone looking for something cute and easy to make! With its simple and adorable design, you can turn it into a sweet keychain to carry with you always. Download the free pattern and start crocheting this charming bear that is sure to bring a smile to your face.",
+    "image": "assets/patterns/images/little-bear.png",
+    "document":"assets/patterns/pdf/mini-bear.pdf"
+    }   
+    ]
+  },
+  
   "Contact":{
         "title": "Contact",
         "emailLabel": "Your email",

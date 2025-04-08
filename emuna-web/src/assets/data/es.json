@@ -74,6 +74,25 @@
     }
   ]
   },
+  "FreePatterns": {
+  "title": "Patrones Gratuitos",
+  "download": "Descargar",
+  "note": "¡No olvides compartir una foto cuando termines!",
+  "items": [
+    {
+      "itemTitle": "Patrón de Pulpo",
+      "description": "¡Este adorable pulpo de crochet sin costuras es perfecto para quienes buscan un proyecto lindo y sencillo! Con su encantador y fácil diseño, podés convertirlo en un llavero único para llevar a todos lados. Descargá el patrón gratuito y empezá a tejer este amigable compañero que seguramente te sacará una sonrisa.",
+      "image": "assets/patterns/images/octopus.jpg",
+      "document": "assets/patterns/pdf/pulpito.pdf"
+    },
+    {
+      "itemTitle": "Patrón de Osito",
+      "description": "¡Este pequeño osito sin costuras es el proyecto perfecto para cualquiera que quiera hacer algo lindo y fácil! Con su diseño simple y adorable, podés convertirlo en un dulce llavero para llevar siempre con vos. Descargá el patrón gratuito y empezá a tejer este encantador osito que seguramente te hará sonreír.",
+      "image": "assets/patterns/images/little-bear.png",
+      "document": "assets/patterns/pdf/osito.pdf"
+    }
+  ]
+},
     "Contact":{
         "title": "Contacto",
         "emailLabel": "Correo electronico",
