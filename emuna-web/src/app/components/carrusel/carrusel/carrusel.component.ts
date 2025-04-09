@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
@@ -11,7 +12,7 @@ interface SlideContent {
 @Component({
   selector: 'app-carrusel',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './carrusel.component.html',
   styleUrl: './carrusel.component.css'
 })
@@ -21,6 +22,7 @@ interface SlideContent {
 export class CarruselComponent implements OnInit, OnDestroy{
   slides: SlideContent[] = [];
   langSubscription: Subscription | undefined;
+  background = 'url("assets/carrousel/background.png")';
 
   constructor(private translate: TranslateService) {}
 
