@@ -2,39 +2,52 @@
     
     <div class="relative h-[400px] overflow-hidden md:h-[500px] shadow-lg shadow-black/50">
       
-<div class="hidden duration-700 ease-in-out" data-carousel-item>
-    <div class="relative w-full h-full">
-      <img src="../../../../assets/carrousel/imagen 1.jpg">
-      <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
-        <h3 class="text-xl mb-2">{{ slides[0].title }}</h3>
-        <p class="text-center">{{ slides[0].description }}</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="hidden duration-700 ease-in-out" data-carousel-item>
-    <div class="relative w-full h-full">
-      <img src="../../../../assets/carrousel/imagen2.jpg">
-      <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
-        <h3 class="text-xl mb-2">{{ slides[1].title }}</h3>
-        <p class="text-center">{{ slides[1].description }}</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="hidden duration-700 ease-in-out" data-carousel-item>
-    <div class="relative w-full h-full">
-      <img src="../../../../assets/carrousel/imagen 3.jpg">
-      <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black/50 text-white text-lg font-semibold p-4">
-        <h3 class="text-xl mb-2">{{ slides[2].title }}</h3>
-        <p class="text-center">{{ slides[2].description }}</p>
-      </div>
-    </div>
-  </div>
-    </div>
 
-  
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <div class="relative h-[400px] overflow-hidden md:h-[500px]">
+      
+          <!-- Slide 1 -->
+          <div class="hidden duration-700 ease-in-out bg-gray-100" data-carousel-item>
+            <div class="relative w-full h-full flex flex-col md:flex-row">
+              <div class="w-full md:w-1/2 h-full flex flex-col justify-center items-center text-center px-6 py-4">
+                <h3 class="text-3xl font-semibold mb-3 text-gray-600 drop-shadow-md tracking-wide">{{ slides[0].title }}</h3>
+                <p class="text-lg text-amber-500 italic drop-shadow-sm">{{ slides[0].description }}</p>
+              </div>              
+              <div class="w-full md:w-1/2 h-full">
+                <img src="../../../../assets/carrousel/imagen1.jpg" class="object-cover w-full h-full" alt="Imagen del slide 1">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Slide 2 -->
+          <div class="hidden duration-700 ease-in-out bg-gray-100" data-carousel-item>
+            <div class="relative w-full h-full flex flex-col md:flex-row">
+              <div class="w-full md:w-1/2 h-full flex flex-col justify-center items-center text-center px-6 py-4">
+                <h3 class="text-3xl font-semibold mb-3 text-gray-600 drop-shadow-md tracking-wide">{{ slides[1].title }}</h3>
+                <p class="text-lg text-amber-500 italic drop-shadow-sm">{{ slides[1].description }}</p>
+              </div>
+              
+              <div class="w-full md:w-1/2 h-full">
+                <img src="../../../../assets/carrousel/imagen2.jpg" class="object-cover w-full h-full" alt="Imagen del slide 2">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Slide 3 -->
+          <div class="hidden duration-700 ease-in-out bg-gray-100" data-carousel-item>
+            <div class="relative w-full h-full flex flex-col md:flex-row">
+              <div class="w-full md:w-1/2 h-full flex flex-col justify-center items-center text-center px-6 py-4">
+                <h3 class="text-3xl font-semibold mb-3 text-gray-600 drop-shadow-md tracking-wide">{{ slides[2].title }}</h3>
+                <p class="text-lg text-amber-500 italic drop-shadow-sm">{{ slides[2].description }}</p>
+              </div>
+              
+              <div class="w-full md:w-1/2 h-full">
+                <img src="../../../../assets/carrousel/imagen3.jpg" class="object-cover w-full h-full" alt="Imagen del slide 3">
+              </div>
+            </div>
+          </div>
+      
+          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
