@@ -1,11 +1,12 @@
 <section>
-    <div class="w-full text-center mb-10 mt-16">
-      <h2 class="text-3xl font-semibold text-[#47403f]">
-        {{ title }}
-      </h2>
-    </div>
+  <div class="w-full text-center mb-15 mt-20">
+    <h2 class="text-4xl font-bold text-gray-700 relative inline-block w-fit">
+      <span class="relative z-10 py-4 px-2">{{title}}</span>
+      <span class="absolute left-0 bottom-1/2 translate-y-1/2 w-full h-1/2 bg-[#faedeb] -z-10 rounded-md"></span>
+    </h2>
+  </div>
     <div>
-        <p class="mt-2 text-[#6b6b6b] text-left mb-10  px-10">
+        <p class="mt-2 text-[#6b6b6b] text-left mb-10 mt-10 px-10">
             {{ notes }}, 
             <a (click)="navigateToContact()" class="text-blue-500 hover:underline cursor-pointer">
             Link 

@@ -217,6 +217,16 @@
               ]
           }
       }
+  },
+  "Review":
+  {
+    "title": "Reviews",
+     "description": "I've had a great experience working with Fiverr:",
+     "ratingTitle1": "Overall Rating",
+     "ratingTitle2": "Seller Communication Level",
+      "ratingTitle3":"Quality of Delivery",
+      "ratingTitle4":"Value of Delivery",
+      "note":"*These ratings are based on Fiverr's platform feedback."
   }
     
 }

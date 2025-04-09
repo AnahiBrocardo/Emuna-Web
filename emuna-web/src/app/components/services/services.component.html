@@ -1,26 +1,15 @@
-<section>
-    <div class="w-full text-left pl-4 md:pl-4 mb-8" style="margin-top: 11vh">
-        <h2 class="text-3xl font-semibold text-[#47403f]">
-            Services
-        </h2>
+<section class="bg-[#555555] py-10">
+  <div class="w-full flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-[#fae0e0]">
+    <div
+      *ngFor="let service of itemsArray"
+      class="flex flex-col items-center text-center p-6 flex-1"
+    >
+      <h1 class="text-white text-lg font-bold mb-2">
+        {{ service.itemTitle }}
+      </h1>
+      <h2 class="text-white text-sm">
+        {{ service.description }}
+      </h2>
     </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div
-          *ngFor="let service of itemsArray"
-          class="service-card max-w-sm mx-auto p-6 border border-[#f0dada] rounded-lg shadow-md bg-transparent opacity-0 transform translate-y-10 transition-all duration-700"
-        >
-          <h1 class="text-[#D96161] text-xl font-bold mb-2">
-            {{ service.itemTitle }}
-          </h1>
-          <h2 class="text-gray-700 text-justify">
-            {{ service.description }}
-          </h2>
-        </div>
-      </div>
- 
-   
-
-
+  </div>
 </section>
-

@@ -1,15 +1,8 @@
 <!-- Wrapper general del carrusel -->
-<div class="relative w-full h-[500px] overflow-hidden">
-
-  <!-- Fondo borroso común a todos los slides -->
-  <div [style.backgroundImage]="background" class="absolute inset-0 bg-cover bg-center bg-fixed z-0"></div>
-
-
-
+<section class="relative w-full bg-white overflow-hidden">
 
   <!-- Contenedor del carrusel -->
-  <div id="default-carousel" class="relative w-full h-full z-30" data-carousel="slide">
-
+  <div id="default-carousel" class="relative w-full h-[500px] z-30" data-carousel="slide">
     <!-- Indicadores -->
     <div class="absolute z-40 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
       <button type="button" class="w-3 h-3 rounded-full bg-white/70" aria-label="Slide 1" data-carousel-slide-to="0"></button>
@@ -19,47 +12,45 @@
 
     <!-- Slide 1 -->
     <div class="hidden duration-300 ease-linear h-full" data-carousel-item>
-      <div class="flex items-center justify-center h-full text-gray-600 relative">
-
-          <div class="md:w-[55%] text-center  md:pr-3">
-            <h2 class="text-3xl font-bold mb-2">{{slides[0].title}}</h2>
-            <p class="text-lg">{{slides[0].description}}</p>
-          </div>
-
-          <div class="  w-[45%] h-full ">
-            <img src="../../../../assets/carrousel/image.jpg" class="w-full h-full object-cover opacity-85" alt="Slide 1">
-          </div>
+      <div class="flex items-center justify-center h-full text-gray-700 relative">
+        <div class="md:w-[55%] text-center md:pr-3">
+          <h2 class="text-3xl font-bold mb-2">{{slides[0].title}}</h2>
+          <p class="text-lg">{{slides[0].description}}</p>
+        </div>
+        <div class="w-[45%] h-full">
+          <img src="../../../../assets/carrousel/image.jpg" class="w-full h-full object-cover opacity-80" alt="Slide 1">
         </div>
       </div>
-  
+    </div>
 
+    <!-- Slide 2 -->
     <div class="hidden duration-300 ease-linear h-full" data-carousel-item>
-      <div class="flex items-center justify-center h-full text-gray-600  relative">
-       
-          <div class="md:w-[55%] text-center  md:pr-6 px-6">
-            <h2 class="text-3xl font-bold mb-2">{{slides[1].title}}</h2>
-            <p class="text-lg">{{slides[1].description}}</p>
-          </div>
-          <div class=" w-[45%] h-full ">
-            <img src="../../../../assets/carrousel/image1.jpg" class="w-full h-full object-cover opacity-85" alt="Slide 2">
-          </div>
+      <div class="flex items-center justify-center h-full text-gray-700 relative">
+        <div class="md:w-[55%] text-center md:pr-6 px-6">
+          <h2 class="text-3xl font-bold mb-2">{{slides[1].title}}</h2>
+          <p class="text-lg">{{slides[1].description}}</p>
+        </div>
+        <div class="w-[45%] h-full">
+          <img src="../../../../assets/carrousel/image1.jpg" class="w-full h-full object-cover opacity-80" alt="Slide 2">
+        </div>
       </div>
     </div>
 
+    <!-- Slide 3 -->
     <div class="hidden duration-300 ease-linear h-full" data-carousel-item>
-      <div class="flex items-center justify-center h-full text-gray-600  relative">
-       
-          <div class="md:w-[55%] text-center md:pr-6 px-6">
-            <h2 class="text-3xl font-bold mb-2">{{slides[2].title}}</h2>
-            <p class="text-lg">{{slides[2].description}}</p>
-          </div>
-          <div class="  w-[45%] h-full ">
-            <img src="../../../../assets/carrousel/image2.jpg" class="w-full h-full object-cover opacity-85" alt="Slide 2">
-          </div>
+      <div class="flex items-center justify-center h-full text-gray-700 relative">
+        <div class="md:w-[55%] text-center md:pr-6 px-6">
+          <h2 class="text-3xl font-bold mb-2">{{slides[2].title}}</h2>
+          <p class="text-lg">{{slides[2].description}}</p>
+        </div>
+        <div class="w-[45%] h-full">
+          <img src="../../../../assets/carrousel/image2.jpg" class="w-full h-full object-cover opacity-80" alt="Slide 3">
+        </div>
       </div>
     </div>
 
-      <button type="button"
+    <!-- Botón anterior -->
+    <button type="button"
       class="absolute top-0 left-0 z-40 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
       data-carousel-prev>
       <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/50 group-hover:bg-white/80">
@@ -80,4 +71,5 @@
       </span>
     </button>
   </div>
-</div>
+
+</section>

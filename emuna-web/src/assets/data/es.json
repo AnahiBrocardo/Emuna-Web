@@ -226,5 +226,14 @@
           ]
     }
     }
-  }
+  },
+  "Review": {
+  "title": "Reseñas",
+  "description": "Tuve una excelente experiencia trabajando con Fiverr:",
+  "ratingTitle1": "Calificación General",
+  "ratingTitle2": "Nivel de Comunicación del Vendedor",
+  "ratingTitle3": "Calidad de la Entrega",
+  "ratingTitle4": "Valor de la Entrega",
+  "note": "*Estas calificaciones se basan en los comentarios de la plataforma de Fiverr."
+}
 }
