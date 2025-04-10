@@ -5,6 +5,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslationService } from '../../services/translation.service';
 import { TranslateService } from '@ngx-translate/core';
 import { forkJoin, from } from 'rxjs';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -33,6 +34,9 @@ export class ContactComponent implements OnInit{
    sendMesagge: String='';
    file: String='';
    notes: String='';
+   imageError: string | null = null;
+   imagePreviewUrl: string | null = null;
+   selectedImage: File | null = null;
 
    langSubscription: any;
 
@@ -103,28 +107,94 @@ export class ContactComponent implements OnInit{
     message: ['', [
       Validators.required,
       Validators.minLength(10), 
-      Validators.pattern(/\S{10,}/) // Al menos 10 caracteres sin contar espacios
-    ]]
+      Validators.pattern(/\S{5,}/) // Al menos 10 caracteres sin contar espacios
+    ]],
+    image: [null as File | null]
    });
    
-  send(){
+
+
+   send(form: any): void {
+
     if (this.contactForm.invalid) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'Please fill in all required fields!',
       });
-    }else{
-
-Swal.fire({
-  icon: 'success',
-  title: 'Message Sent!',
-  text: 'We will get back to you soon.',
-  confirmButtonColor: '#3085d6',
-});
-
-this.contactForm.reset();
+      return;
     }
-      
+  
+    const formData = new FormData();
+    formData.append('email', this.contactForm.get('email')?.value ?? '');
+   formData.append('subject', this.contactForm.get('subject')?.value ?? '');
+    formData.append('message', this.contactForm.get('message')?.value ?? '');
+
+  
+    if (this.selectedImage) {
+      formData.append('image', this.selectedImage);
+    }
+
+    emailjs.send(
+      'service_m05lske',
+      'template_5wiurmf',
+      {
+       email: this.contactForm.get('email')?.value,
+      subject: this.contactForm.get('subject')?.value,
+       message: this.contactForm.get('message')?.value,
+      image: this.selectedImage
+  },
+      { publicKey: 'xC-ELT_JUavCDsViQ' }
+    ).then(() => {
+      Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: 'We will get back to you soon.',
+        confirmButtonColor: '#3085d6',
+      });
+  
+      this.contactForm.reset();
+      this.removeImage();
+      this.imagePreviewUrl = null;
+    }).catch((error) => {
+      console.error('Error:', error);
+    });
   }
+
+  
+
+  removeImage(): void {
+    this.contactForm.patchValue({ image: null });
+  this.contactForm.get('image')?.updateValueAndValidity();
+
+  this.imagePreviewUrl = null;
+  this.imageError = null;
+
+  const fileInput = document.getElementById('file_input') as HTMLInputElement;
+  if (fileInput) {
+    fileInput.value = ''; 
+  }
+  }
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+  
+    if (input.files && input.files.length > 0) {
+      this.selectedImage = input.files[0];
+  
+      // (opcional) vista previa
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imagePreviewUrl = reader.result as string;
+      };
+      reader.readAsDataURL(this.selectedImage);
+  
+      // limpiar error si había
+      this.imageError = null;
+    } else {
+      this.selectedImage = null;
+      this.imagePreviewUrl = null;
+    }
+  }
+  
 }

@@ -111,7 +111,7 @@
        "commentPlaceholder": "Please specify if it's custom pattern design, pattern purchase, testing of patterns,  or a general inquiry",
        "commentRequired": "Message is required",
        "commentMinLenght":"Message must be at least 10 characters long",
-       "commentMinCharacters":"Message must have at least 10 non-space characters",
+       "commentMinCharacters":"Message must have at least 5 non-space characters",
        "sendMesagge": "Send message",
        "file": "Upload file",
        "notes": "*If for any reason you can't submit your inquiry, please send it to"

@@ -1,7 +1,7 @@
 .background {
     background: 
-      radial-gradient(circle at 60% 20%,rgb(253, 225, 197) 30%, transparent 60%),
-      radial-gradient(circle at 40% 70%,rgba(255, 227, 227, 0.8) 20%, transparent 55%),
+      radial-gradient(circle at 60% 20%,rgb(253, 230, 207) 30%, transparent 60%),
+      radial-gradient(circle at 40% 70%,rgba(255, 255, 255, 0.8) 20%, transparent 55%),
       radial-gradient(circle at 30% 80%,rgb(255, 247, 245) 20%, transparent 70%),
       linear-gradient(to bottom right, #faedeb,rgb(253, 231, 209));
     background-blend-mode: lighten;

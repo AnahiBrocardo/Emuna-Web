@@ -108,7 +108,7 @@
        "commentPlaceholder": "Deje un mensaje...",
        "commentRequired": "Debe ingresar un mensaje",
        "commentMinLenght":"El mensaje debe contener como mínimo 10 caracteres",
-       "commentMinCharacters":"El mensaje debe incluir al menos 10 caracteres que no sean espacios en blanco",
+       "commentMinCharacters":"El mensaje debe incluir al menos 5 caracteres que no sean espacios en blanco",
        "sendMesagge": "Enviar",
        "file": "Cargar archivo",
        "notes": "*Si por algún motivo no podés enviar tu consulta, podés enviarla a"
