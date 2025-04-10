@@ -1,40 +1,29 @@
-<section  id="about-me">
-    <div class="w-full text-left pl-4 md:pl-4 mb-4" style="margin-top: 15vh;">
-        <h2 class="text-4xl font-bold text-gray-700 relative inline-block w-fit">
-          <span class="relative z-10 px-2">{{title}}</span>
-          <span class="absolute left-0 bottom-1/2 translate-y-1/2 w-full h-1/2 bg-[#faedeb] -z-10 rounded-md"></span>
-        </h2>
-      </div>
+<section id="about-me" class="py-16 mt-20">
+  <div class="w-[90vw] mx-auto flex flex-col md:flex-row gap-6 items-start justify-between text-left">
 
-<div class="w-full flex flex-col items-center mt-[7vh]">
- <div class="w-[85vw] mx-auto flex flex-row items-center justify-center gap-6 mb-6 fade-in">
- 
-    <div class="w-[20%] flex-shrink-0">
-      <img src="../../../../assets/about-me/kira.jpeg" alt="Kira"
-        class="w-full max-h-48 object-cover rotate-[2deg] rounded-xl bg-[#faedeb] p-2 shadow-md"
-        style="clip-path: polygon(0 5%, 90% 0, 100% 95%, 10% 100%);" />
-    </div>
-
-    <div class="w-[70%] text-gray-600 text-base text-justify leading-relaxed flex flex-col gap-4">
+    <div class="w-[55] w-full text-gray-600 text-base leading-relaxed flex flex-col gap-4">
+      <h2 class="text-4xl font-bold text-gray-700 relative inline-block mb-6 w-fit">
+        <span class="relative z-10 px-2 mb-15">{{title}}</span>
+        <span class="absolute inset-x-0 bottom-1/2 translate-y-1/2 h-1/2 bg-[#faedeb] -z-10 rounded-md"></span>
+      </h2>
+      <h4 class=" text-xl font-bold text-gray-500" >{{presentation}}</h4>
       <p>{{description1}}</p>
       <p>{{description2}}</p>
-    </div>
-  </div>
-  
-  <div class="w-[85vw] mx-auto flex flex-row items-center justify-center gap-6 mb-6 fade-in">
-  
-    <div class="w-[70%] text-gray-600 text-base text-justify leading-relaxed flex flex-col gap-4">
       <p>{{description3}}</p>
       <p>{{description4}}</p>
     </div>
 
-    <div class="w-[20%] flex-shrink-0">
-      <img src="../../../../assets/about-me/teo.jpg" alt="Teo"
-        class="w-full max-h-60 object-cover rotate-[-2deg] rounded-xl bg-[#faedeb] p-2 shadow-md"
-        style="clip-path: polygon(0 5%, 90% 0, 100% 95%, 10% 100%);" />
-    </div>
-  </div>
-</div>
+    <div class="relative w-[35vw] ">
+    <img src="../../../../assets/about-me/kira.jpeg" alt="Kira"
+    class="absolute left-0 top-0 w-[15vw] h-[30vh] object-cover rotate-[2deg] p-3 rounded-xl bg-[#faedeb] shadow-md z-10"
+    style="clip-path: polygon(0 5%, 90% 0, 100% 95%, 10% 100%);" />
 
-<div class="w-[70vw] mx-auto border-t mt-12" style="border-color: #faedeb;"></div>
+   <img src="../../../../assets/about-me/teo.jpg" alt="Teo"
+   class="absolute left-[8vw] top-[20vh] w-[15vw] h-[35vh] object-cover rotate-[-2deg] p-3 rounded-xl bg-[#faedeb] shadow-md z-20"
+ style="clip-path: polygon(0 5%, 90% 0, 100% 95%, 10% 100%);" />
+
+    </div>
+
+  </div>
+  <div class="w-[70vw] mx-auto border-t mt-20" style="border-color: #faedeb;"></div>
 </section>

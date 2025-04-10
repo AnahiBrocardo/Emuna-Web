@@ -50,7 +50,8 @@
   },
   "AboutMe": {
         "title": "Sobre mí",
-        "description1": "¡Hola! Soy Mariana, una apasionada del crochet. Nací y vivo en Argentina, donde además estudio Licenciatura en Ciencias Biológicas.",
+        "presentation":"¡Hola! Soy Mariana, una apasionada del crochet",
+        "description1": "Nací y vivo en Argentina, donde además estudio Licenciatura en Ciencias Biológicas.",
         "description2": "Mi mundo está lleno de inspiración: adoro el otoño, ese momento mágico en el que la naturaleza se viste de colores cálidos; disfruto de paseos por la playa junto a mis amigas, de saborear una buena taza de té, de sumergirme en películas y libros, y de compartir momentos especiales con mi querida perrita Kira y mi gatito Teo",
         "description3": "Empecé a tejer a crochet hace años y lo que comenzó como un hobby se transformó en una forma de vida. Cada puntada, cada diseño, está hecho con mucho cariño y dedicación, buscando siempre transmitir la esencia de mi pasión por el arte y la creatividad.",
         "description4": "En esta página encontrarás patrones cuidadosamente diseñados, pensados para que tanto principiantes como expertos disfruten creando piezas llenas de encanto y personalidad. Mi compromiso es ofrecerte un trabajo de calidad que te inspire y te haga sentir acompañado en cada proyecto.",
@@ -228,7 +229,7 @@
     }
   },
   "Review": {
-  "title": "Reseñas",
+  "title": "Comentarios",
   "description": "Tuve una excelente experiencia trabajando con Fiverr:",
   "ratingTitle1": "Calificación General",
   "ratingTitle2": "Nivel de Comunicación del Vendedor",

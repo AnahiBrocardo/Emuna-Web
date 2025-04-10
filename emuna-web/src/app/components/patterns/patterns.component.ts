@@ -45,6 +45,13 @@ export class PatternsComponent implements OnInit{
            this.freePatterns[i]= items[i];
           }
         });
-  
     }
+
+    downloadPattern(pattern: any) {
+      const link = document.createElement('a');
+      link.href = pattern.download; // asumimos que tenés esta propiedad
+      link.download = pattern.itemTitle + '.pdf'; // o .zip, .jpg, etc.
+      link.click();
+    }
+    
 }

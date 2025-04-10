@@ -12,6 +12,7 @@ import { forkJoin, from } from 'rxjs';
 })
 export class AboutMeComponent implements OnInit{
   title: string= '';
+  presentation: string ='';
   description1: string='';
   description2: string='';
   description3: string='';
@@ -35,14 +36,16 @@ export class AboutMeComponent implements OnInit{
   loadData(): void{
    forkJoin([
            from(this.translationService.translate('AboutMe.title')),
+           from(this.translationService.translate('AboutMe.presentation')),
            from(this.translationService.translate('AboutMe.description1')),
            from(this.translationService.translate('AboutMe.description2')),
            from(this.translationService.translate('AboutMe.description3')),
            from(this.translationService.translate('AboutMe.description4')),
            from(this.translationService.translate('AboutMe.description5')),
            from(this.translationService.translate('AboutMe.caption'))
-         ]).subscribe(([title, description1, description2,description3, description4, description5, caption]) => {
+         ]).subscribe(([title, presentation, description1, description2,description3, description4, description5, caption]) => {
            this.title = title;
+           this.presentation= presentation;
            this.description1=description1;
            this.description2=description2;
            this.description3=description3;
