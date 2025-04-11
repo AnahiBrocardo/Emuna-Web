@@ -11,7 +11,7 @@
      
         <form [formGroup]="contactForm" #myForm (ngSubmit)="send(myForm)" class="space-y-8">
             <div>
-                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{emailLabel}}</label>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{emailLabel}} (*)</label>
                 <input name="email" formControlName="email" type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-600 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="example@mail.com" required>
                 
                 <div *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].invalid" class="text-red-500 text-sm mt-1">
@@ -21,7 +21,7 @@
             </div>
 
             <div>
-                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{subjectLabel}}</label>
+                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{subjectLabel}} (*)</label>
                 <input type="text" name="subject" formControlName="subject" id="subject" class="block p-3 w-full text-sm text-gray-600 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder= {{subjectLabel}} required>
                 
                 <div *ngIf="contactForm.controls['subject'].touched && contactForm.controls['subject'].invalid" class="text-red-500 text-sm mt-1">
@@ -32,7 +32,7 @@
             </div>
 
             <div class="sm:col-span-2">
-                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">{{commentLabel}}</label>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">{{commentLabel}} (*)</label>
                 <textarea id="message" name="message" formControlName="message" rows="6" class="block p-2.5 w-full text-sm text-gray-600 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder={{commentPlaceholder}}></textarea>
                 
                 <div *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].invalid" class="text-red-500 text-sm mt-1">
@@ -41,45 +41,47 @@
                     <div *ngIf="contactForm.controls['message'].hasError('pattern')">{{commentMinCharacters}}.</div>
                 </div>
             </div>
-
             <div>
+              <label for="imageUrl" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+              {{urlLabel}} (png | jpg | webP)
+              </label>
               
-                  
-                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">{{file}}</label>
-                <input 
-                name="image"
-                id="file_input" 
-                type="file" 
-                accept=".jpg, .jpeg, .png"
-                (change)="onFileSelected($event)"
+              <input 
+                type="text"
+                id="imageUrl"
+                name="imageUrl"
+                formControlName="imageUrl"
+                placeholder="https://example.com/image.jpg"
+                (input)="onImageUrlChange()"
                 class="block w-full text-sm text-gray-700 border border-gray-300 rounded-md cursor-pointer 
                        bg-white hover:bg-gray-100 focus:outline-none 
                        border-l-[12px] border-l-[#fde0c3] focus:ring-2 focus:ring-[#f2c7c0]" />
-                <p class="mt-1 text-sm text-gray-500">Opcional: solo para diseños o testeo. JPG o PNG (máx. 1200x1200px).</p>
-                <div *ngIf="imageError" class="mt-2 text-sm text-red-500">
-                    {{ imageError }}
-                  </div>  
-
-                  <div *ngIf="imagePreviewUrl" class="relative mt-4 inline-block">
-                    <img 
-                      [src]="imagePreviewUrl" 
-                      alt="Image preview" 
-                      class="max-w-[200px] h-auto rounded-md border shadow-sm"
-                    />
-                    
-                    <button 
-                      type="button"
-                      (click)="removeImage()"
-                      class="absolute top-1 right-1 bg-red-100 rounded-full p-1 shadow hover:bg-red-200"
-                      aria-label="Remove image"
-                    >
-                      <svg class="w-4 h-4 text-red-500 hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                      </svg>
-                    </button>
-                  </div>
-                  
+                          
+              <div *ngIf="imageError" class="mt-2 text-sm text-red-500">
+                {{ imageError }}
+              </div>
+            
+              <div *ngIf="imagePreviewUrl" class="relative mt-4 inline-block">
+                <img 
+                  [src]="imagePreviewUrl" 
+                  alt="Image preview" 
+                  class="max-w-[200px] h-auto rounded-md border shadow-sm"
+                />
+                
+                <button 
+                  type="button"
+                  (click)="removeImage()"
+                  class="absolute top-1 right-1 bg-red-100 rounded-full p-1 shadow hover:bg-red-200"
+                  aria-label="Delete image"
+                >
+                  <svg class="w-4 h-4 text-red-500 hover:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                </button>
+              </div>
             </div>
+            
+
 
              <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-gray-700 rounded-lg bg-[#fde0c3] sm:w-fit hover:bg-[#f1cba5] focus:ring-4 focus:outline-none focus:ring-[#f2c7c0]">
                 {{sendMesagge}}

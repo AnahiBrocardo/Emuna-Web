@@ -13,8 +13,8 @@
         {
           "id": 1,
           "title": "Triceratops rosa",
-          "description": "¡Viajá al mundo de los dinosaurios con este adorable triceratops tejido a crochet! Hecho con suave hilo de felpa, es perfecto para abrazar o decorar cualquier rincón especial. Con colores pasteles, ojos brillantes y su característica cresta, es un tierno compañero para todas las edades. Ideal para regalar o sumar a tu colección de amigurumis—¡llevá a casa este encantador dinosaurio!",
-          "measurements":"Medidas finales: 25 cm de alto (9,8 pulgadas).",
+          "description": "Viajá al mundo de los dinosaurios con este triceratops tejido a crochet. Hecho con hilo de felpa suave, en colores pasteles y con ojos brillantes, es un tierno compañero para todas las edades. Ideal para regalar o sumar a tu colección de amigurumis.",
+          "measurements":"25 cm de alto (9,8 pulgadas).",
           "materials":"Materiales: Hilo de felpa grueso y súper suave.",
           "skillLevel": "Nivel de dificultad: Intermedio.",
           "image": "assets/products/pink-dinosaur.jpg"
@@ -22,25 +22,25 @@
         {
           "id": 2,
           "title": "Erizo con un corazón",
-          "description": "¡Descubrí el encanto en cada puntada con este adorable erizo amigurumi! Tejido con amor y con un corazón entre sus manos, es un tierno símbolo de amor y amistad. Ideal como regalo o decoración, esta encantadora pieza te invita a disfrutar del arte del crochet. ¡Sumá este erizo a tu colección y dejate conquistar por su ternura!",
-          "measurements":"Medidas finales: 11 cm de alto y 8 cm en su punto más ancho (4,3 x 3,1 pulgadas).",
-          "materials":"Materiales: Hilo de algodón 100% de grosor medio.",
-          "skillLevel": "Nivel de dificultad: Principiantes.",
+          "description": "¡Descubrí el encanto en cada puntada con este adorable erizo amigurumi! .Es un tierno símbolo de amor y amistad, ideal como regalo o decoración. ¡Sumá este erizo a tu colección y déjate conquistar por su ternura!",
+          "measurements":"11 cm de alto y 8 cm en su punto más ancho (4,3 x 3,1 pulgadas).",
+          "materials":"Hilo de algodón 100% de grosor medio.",
+          "skillLevel": "Principiantes.",
           "image": "assets/products/hedgehog-heart.jpg"
         },
         {
           "id": 3,
-          "title": "Adorable gallito con girasol",
-          "description": "Este adorable gallito tejido al crochet está listo para iluminar cualquier espacio con encanto y ternura, sosteniendo un hermoso girasol — símbolo de luz y felicidad. Hecho a mano con amor y dedicación, este pequeño gallo es el regalo perfecto, lleno de personalidad y calidez. ¡Llevá a casa este encantador amigurumi hoy mismo!",
-          "measurements":"Medidas finales: 6 cm de alto y 7 cm en su punto más ancho.",
-          "materials":"Materiales: Hilo de algodón 100% de grosor medio",
-          "skillLevel": "Nivel de dificultad: Principiantes.",
+          "title": "Gallito con girasol",
+          "description": "Este tierno gallito tejido sostiene un girasol, símbolo de luz y alegría. Está listo para iluminar cualquier espacio con su calidez. Hecho a mano con amor, es el regalo perfecto para sumar a tu colección de amigurumis.",
+          "measurements":"6 cm de alto y 7 cm en su punto más ancho.",
+          "materials":"Hilo de algodón 100% de grosor medio",
+          "skillLevel": "Principiantes.",
           "image": "assets/products/rooster-flower.jpg"
         },
         {
           "id": 4,
           "title": "Dinosaurio",
-          "description": "¡Descubrí la magia de este adorable dinosaurio amigurumi sin costuras! Suave, encantador y apto para principiantes, es el compañero perfecto para aportar calidez y originalidad a cualquier espacio. ¡Agregalo a tu colección y dejate conquistar por su ternura!",
+          "description": "¡Descubrí la magia de este adorable dinosaurio amigurumi! Es el compañero perfecto para aportar calidez y originalidad a cualquier espacio. ¡Agregalo a tu colección y dejate conquistar por su ternura!",
           "measurements":" Finished measurements: 18 cm de alto (7,0 pulgadas).",
           "materials":"Materials: Hilo de chenilla grueso y súper suave",
           "skillLevel": "Nivel de dificultad: Principiantes.",
@@ -110,8 +110,8 @@
        "commentMinLenght":"El mensaje debe contener como mínimo 10 caracteres",
        "commentMinCharacters":"El mensaje debe incluir al menos 5 caracteres que no sean espacios en blanco",
        "sendMesagge": "Enviar",
-       "file": "Cargar archivo",
-       "notes": "*Si por algún motivo no podés enviar tu consulta, podés enviarla a"
+       "urlLabel": "URL de la imagen ",
+       "notes": "*Si por algún motivo no podés enviar tu consulta o si deseás adjuntar un archivo, envia un mail a"
 
   },
     "Questions": {

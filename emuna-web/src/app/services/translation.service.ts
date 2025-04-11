@@ -10,18 +10,20 @@ export class TranslationService {
   private currentLang = 'en';
 
   langChange$: any;
+
   constructor(private translateService: TranslateService, private http: HttpClient) {
     const savedLang = localStorage.getItem('language') || 'en';
     this.currentLang = savedLang;
 
     this.translateService.setDefaultLang('en');
-    this.translateService.use('en');
+    this.translateService.use(savedLang); 
      
     this.loadTranslations('en');
     this.loadTranslations('es');
   }
 
   async setLang(lang: string): Promise<void> {
+    this.currentLang = lang;
     this.translateService.use(lang);
     localStorage.setItem('language', lang);
     await this.loadTranslations(lang);

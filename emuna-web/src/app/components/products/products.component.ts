@@ -19,7 +19,7 @@ export class ProductsComponent implements OnInit{
   notes: string='';
   notes2: string='';
   langSubscription: any;
-  
+  currentLang: string ='';
 
   constructor(private translationService: TranslationService,
     private translate: TranslateService,
@@ -28,8 +28,10 @@ export class ProductsComponent implements OnInit{
 
     ngOnInit(): void {
       this.loadProducts();
+      this.currentLang= this.translate.currentLang;
 
       this.langSubscription = this.translate.onLangChange.subscribe(() => {
+        this.currentLang= this.translate.currentLang;
         this.loadProducts();
       });
     }
