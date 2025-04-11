@@ -23,7 +23,6 @@ export class ProductsComponent implements OnInit{
 
   constructor(private translationService: TranslationService,
     private translate: TranslateService,
-    private http: HttpClient
   ) {}
 
     ngOnInit(): void {

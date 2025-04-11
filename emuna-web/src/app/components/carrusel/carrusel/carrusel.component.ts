@@ -1,12 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { Subscription } from 'rxjs';
-
-interface SlideContent {
-  title: string;
-  description: string;
-}
+import { Component, OnInit } from '@angular/core';
+import {  TranslateService } from '@ngx-translate/core';
+import { forkJoin, from, Subscription } from 'rxjs';
+import { TranslationService } from '../../../services/translation.service';
 
 
 @Component({
@@ -19,12 +15,23 @@ interface SlideContent {
 
 
 
-export class CarruselComponent implements OnInit, OnDestroy{
-  slides: SlideContent[] = [];
-  langSubscription: Subscription | undefined;
-  background = 'url("assets/carrousel/background.png")';
+export class CarruselComponent implements OnInit{
+  description1: string='';
+  description2: string='';
+  description3: string='';
 
-  constructor(private translate: TranslateService) {}
+  imageList = [
+    '../../../../assets/carrousel/image1.jpg',
+    '../../../../assets/carrousel/image2.jpg'
+  ]
+
+  currentImages: string[] = [this.imageList[0], this.imageList[1]];
+
+  langSubscription: Subscription | undefined;
+
+  constructor(private translationService: TranslationService,
+    private translate: TranslateService
+  ) {}
 
   ngOnInit(): void {
     this.loadItems();
@@ -37,26 +44,20 @@ export class CarruselComponent implements OnInit, OnDestroy{
     this.langSubscription?.unsubscribe();
   }
 
+
   getCurrentLang(): string {
     return this.translate.currentLang || 'en';
   }
 
   loadItems(): void {
-    const lang = this.getCurrentLang();
-
-    const translations: { [lang: string]: SlideContent[] } = {
-      en: [
-        { title: 'Pattern Testing', description: 'We conduct thorough tests to ensure the effectiveness of your patterns.' },
-        { title: 'Pattern Design', description: 'We design custom patterns or the ones you already have on the page.' },
-        { title: 'Pattern Sales', description: 'Buy exclusive patterns for your project or business.' },
-      ],
-      es: [
-        { title: 'Pruebas de Patrones', description: 'Realizamos pruebas exhaustivas para garantizar la efectividad de tus patrones.' },
-        { title: 'Diseño de Patrones', description: 'Diseñamos patrones personalizados o usamos los que ya tengas.' },
-        { title: 'Venta de Patrones', description: 'Comprá patrones exclusivos para tu proyecto o emprendimiento.' },
-      ]
-    };
-
-    this.slides = translations[lang] || translations['en'];
+   forkJoin([
+              from(this.translationService.translate('Header.description1')),
+              from(this.translationService.translate('Header.description2')),
+              from(this.translationService.translate('Header.description3')),
+            ]).subscribe(([description1, description2,description3]) => {
+              this.description1=description1;
+              this.description2=description2;
+              this.description3=description3;
+            });
   }
 }

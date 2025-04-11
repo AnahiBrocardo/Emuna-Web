@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { TranslateService } from '@ngx-translate/core';
 import { forkJoin, from } from 'rxjs';
@@ -39,27 +39,20 @@ export class ReviewsComponent implements OnInit{
 
   scrollAmount: number = 3; 
   scrollPosition: number = 0;
+  visibleCount: number = 3;
 
   constructor(private translationService: TranslationService,
       private translate: TranslateService
     ) {}
 
-  goToPrev() {
-    if (this.scrollPosition > 0) {
-      this.scrollPosition -= this.scrollAmount;
-    }
-  }
-
-  goToNext() {
-    if (this.scrollPosition < this.reviewImages.length - this.scrollAmount) {
-      this.scrollPosition += this.scrollAmount;
-    }
-  }
+  
   
   ngOnInit(): void {
       this.loadData();
+      this.visibleCount = this.getVisibleCount();
       this.langSubscription = this.translate.onLangChange.subscribe(() => {
         this.loadData();
+        this.visibleCount = this.getVisibleCount();
       });
     }
   
@@ -83,5 +76,27 @@ export class ReviewsComponent implements OnInit{
            });
     }
        
+    
+
+    getVisibleCount(): number {
+      return window.innerWidth >= 768 ? 3 : 1;
+    }
+    // Función para avanzar en las imágenes
+    nextImage() {
+      if (this.scrollPosition < this.reviewImages.length - this.visibleCount) {
+        this.scrollPosition++;
+      }
+    }
   
+    // Función para retroceder en las imágenes
+    prevImage() {
+      if (this.scrollPosition > 0) {
+        this.scrollPosition--;
+      }
+    }
+  
+    @HostListener('window:resize', ['$event'])
+    onResize(event: any) {
+      this.visibleCount = this.getVisibleCount();
+    }
 }

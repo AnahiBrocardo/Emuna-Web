@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslationService } from '../../../services/translation.service';
 
@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit{
   questions: string='';
   aboutMe: string='';
   contact: string='';
+  lastScrollTop = 0;
 
   constructor(private router: Router, private translationService: TranslationService) {}
 
@@ -59,7 +60,26 @@ export class NavbarComponent implements OnInit{
     this.router.navigate(['/questions']);
   }
   
+  navigateToHome():void{
+    this.router.navigate(['']);
+  }
   getCurrentLang(): string {
     return this.translationService.getCurrentLang();
   }
+
+  @HostListener('window:scroll', [])
+onWindowScroll() {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  const navbar = document.querySelector('nav');
+  if (!navbar) return;
+
+  if (currentScroll > this.lastScrollTop) {
+    navbar.classList.add('nav-hidden');
+  } else {
+    navbar.classList.remove('nav-hidden');
+  }
+
+  this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}
 }

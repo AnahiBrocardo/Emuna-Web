@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { TranslationService } from '../../../services/translation.service';
 import { TranslateService } from '@ngx-translate/core';
 import { forkJoin, from } from 'rxjs';
@@ -10,15 +10,13 @@ import { forkJoin, from } from 'rxjs';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css'
 })
-export class AboutMeComponent implements OnInit{
+export class AboutMeComponent implements OnInit, AfterViewInit{
   title: string= '';
   presentation: string ='';
   description1: string='';
   description2: string='';
   description3: string='';
   description4: string='';
-  description5: string='';
-  caption: string='';
   langSubscription: any;
 
   constructor(private translationService: TranslationService,
@@ -33,6 +31,25 @@ export class AboutMeComponent implements OnInit{
     });
   }
 
+  ngAfterViewInit(): void {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible'); 
+          }
+        });
+      },
+      {
+        threshold: 0.3
+      }
+    );
+  
+    const elements = document.querySelectorAll('.img-fade');
+    elements.forEach(el => observer.observe(el));
+  }
   loadData(): void{
    forkJoin([
            from(this.translationService.translate('AboutMe.title')),
@@ -40,18 +57,14 @@ export class AboutMeComponent implements OnInit{
            from(this.translationService.translate('AboutMe.description1')),
            from(this.translationService.translate('AboutMe.description2')),
            from(this.translationService.translate('AboutMe.description3')),
-           from(this.translationService.translate('AboutMe.description4')),
-           from(this.translationService.translate('AboutMe.description5')),
-           from(this.translationService.translate('AboutMe.caption'))
-         ]).subscribe(([title, presentation, description1, description2,description3, description4, description5, caption]) => {
+           from(this.translationService.translate('AboutMe.description4'))
+         ]).subscribe(([title, presentation, description1, description2,description3, description4]) => {
            this.title = title;
            this.presentation= presentation;
            this.description1=description1;
            this.description2=description2;
            this.description3=description3;
            this.description4=description4;
-           this.description5=description5;
-           this.caption=caption;
          });
   }
      

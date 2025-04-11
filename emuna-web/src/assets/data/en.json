@@ -7,6 +7,11 @@
     "aboutMe": "About me",
     "contact": "Contact"
   },
+  "Header": {
+    "description1": "We create, test, and offer ",
+    "description2": "unique patterns " ,
+    "description3": "to empower your ideas"
+  },
     "Products": {
       "notes": "Crochet pattern only. NOT a finished toy- For more information, ",
       "notes2": "Please note that cancellations and refunds for digital patterns will not be accepted after purchase.",
@@ -15,49 +20,75 @@
               "id": 1,
               "title": "Pink Triceratops",
               "description": "Travel to the world of dinosaurs with this crochet triceratops. Made with soft plush yarn in pastel colors and shiny eyes, it’s a sweet companion for all ages. Perfect as a gift or to add to your amigurumi collection.",
-              "measurements":"5 cm in high (9,8 inches).",
-              "materials":"Super soft thick chenille yarn.",
-              "skillLevel": "Intermediate.",
+              "measurements":"5 cm in high (9,8 inches)",
+              "materials":"Super soft thick chenille yarn",
+              "skillLevel": "Intermediate",
               "image": "assets/products/pink-dinosaur.jpg"
           },
           {
               "id": 2,
               "title": "Hedgehog with a Heart",
               "description": "Discover the charm in every stitch with this adorable amigurumi hedgehog! A sweet symbol of love and friendship, it's perfect as a gift or a cute decoration. Add this little hedgehog to your collection and let its cuteness win you over!",
-              "measurements":"11 cm (4,3 inches) in height and 8 cm (3,1 inches) at its widest point.",
-              "materials":"Medium-weight 100% cotton yarn.",
-              "skillLevel": "Beginners.",
+              "measurements":"11 cm (4,3 inches) in height and 8 cm (3,1 inches) at its widest point",
+              "materials":"Medium-weight 100% cotton yarn",
+              "skillLevel": "Beginners",
               "image": "assets/products/hedgehog-heart.jpg"
           },
           {
               "id": 3,
               "title": "Little rooster with a sunflower",
               "description": "This adorable crocheted rooster holds a sunflower — a symbol of light and joy. Ready to brighten any space with its warmth, it's lovingly handmade and makes the perfect gift or addition to your amigurumi collection.",
-              "measurements":"6 cm (2,3 inches) in height and 7 cm (2,7 inches) at its widest point.",
+              "measurements":"6 cm (2,3 inches) in height and 7 cm (2,7 inches) at its widest point",
               "materials":"Medium-weight 100% cotton yarn",
-              "skillLevel": "Beginners.",
+              "skillLevel": "Beginners",
               "image": "assets/products/rooster-flower.jpg"
           },
           {
             "id": 4,
             "title": "Dinosaur",
             "description": "Discover the magic of this adorable dinosaur amigurumi! It's the perfect companion to bring warmth and charm to any space. Add it to your collection and let yourself be won over by its cuteness!",
-            "measurements":"18 cm in high (7,0 inches).",
+            "measurements":"18 cm in high (7,0 inches)",
             "materials":"Super soft thick chenille yarn",
             "skillLevel": "Beginners.",
             "image": "assets/products/dinosaur.jpg"
-        }
+        },
+        {
+            "id":5,
+            "title":"Elephant holding a heart",
+            "description": "This sweet amigurumi elephant represents love and sweetness in every stitch. It's the perfect gift for special occasions, a charming decoration, or a little companion to brighten your day.",
+            "measurements":" 15 cm (5,9 inches) in height including the heart",
+            "materials":"Medium-weight 100% cotton yarn",
+            "skillLevel": "Beginners.",
+            "image": "assets/products/elephant.jpg"
+        },
+        {
+            "id":6,
+            "title":"Cow",
+            "description": "This soft hand-crocheted cow is full of charm and sweetness. Easy to make and perfect for beginners, it's ideal as a gift, decoration, or to brighten any collection. Don’t miss the chance to add it to your crochet world!",
+            "measurements":"23 cm in high (9,0 inches)",
+            "materials":"Super soft thick chenille yarn",
+            "skillLevel": "Beginners",
+            "image": "assets/products/cow.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Mushroom",
+            "description": "This soft chenille mushroom is a simple and adorable crochet project, perfect for beginners or anyone looking for a relaxing and fun creation. Add a touch of charm to any space—don’t miss out on this little gem!",
+            "measurements": "25 cm in height (9.8 inches)",
+            "materials": "Super soft thick chenille yarn",
+            "skillLevel": "Beginners",
+            "image": "assets/products/mushroom.jpg"
+          }
       ]
     },
     "AboutMe": {
       "title": "About Me",
       "presentation":"Hello! I’m Mariana, a crochet enthusiast",
-      "description1": "I was born and live in Argentina, where I am also studying a Bachelor’s in Biological Sciences..",
-      "description2": "My world is full of inspiration: I adore autumn, that magical time when nature dresses in warm colors; I enjoy walks on the beach with my friends, savoring a good cup of tea, immersing myself in movies and books, and sharing special moments with my beloved dog Kira and my kitten Teo.",
-      "description3": "I started crocheting years ago, and what began as a hobby has turned into a way of life. Each stitch, each design, is made with great affection and dedication, always aiming to convey the essence of my passion for art and creativity.",
-      "description4": "On this page, you will find carefully designed patterns, meant for both beginners and experts to enjoy creating pieces full of charm and personality. My commitment is to offer you quality work that inspires you and makes you feel accompanied in every project.",
-      "description5": "Thank you for visiting my page! I hope you enjoy exploring my creations as much as I enjoy crocheting them for you.",
-      "caption":"My helpers Kira and Teo"
+      "description1": "I was born and live in Argentina, where I also study for a degree in Biological Sciences.",
+      "description2": "I find inspiration in the little things: the warm colors of autumn, beach walks with friends, a good cup of tea, movies, books, and the love of my dog Kira and my cat Teo.",
+     "description3": "I started crocheting years ago and, over time, it became a way of life. Every stitch and design is born from a love for art and creativity.",
+     "description4": "On this page, you'll find thoughtfully designed patterns meant for both beginners and experts to enjoy creating charming and unique pieces. My commitment is to offer you quality and inspiration in every project."
+
   },
   "Services":{
    "title": "What I Offer",

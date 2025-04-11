@@ -2,21 +2,22 @@
   "Navbar": {
     "home": "Inicio",
     "services": "Servicios",
-    "freePatterns": "Patrones Gratis",
+    "freePatterns": "Patrones Gratuitos",
     "questions": "Preguntas",
     "aboutMe": "Sobre mí",
     "contact": "Contacto"
   },
   "Products": {
       "notes": "Las imagenes son ilustrativas, para mas informacion diríjase a ",
+      "notes2": "Tenga en cuenta que no se aceptarán cancelaciones ni reembolsos para los patrones digitales después de la compra.",
       "items": [
         {
           "id": 1,
           "title": "Triceratops rosa",
           "description": "Viajá al mundo de los dinosaurios con este triceratops tejido a crochet. Hecho con hilo de felpa suave, en colores pasteles y con ojos brillantes, es un tierno compañero para todas las edades. Ideal para regalar o sumar a tu colección de amigurumis.",
-          "measurements":"25 cm de alto (9,8 pulgadas).",
-          "materials":"Materiales: Hilo de felpa grueso y súper suave.",
-          "skillLevel": "Nivel de dificultad: Intermedio.",
+          "measurements":"25 cm de alto (9,8 pulgadas)",
+          "materials":" Hilo de felpa grueso y súper suave",
+          "skillLevel": "Intermedio",
           "image": "assets/products/pink-dinosaur.jpg"
         },
         {
@@ -25,7 +26,7 @@
           "description": "¡Descubrí el encanto en cada puntada con este adorable erizo amigurumi! .Es un tierno símbolo de amor y amistad, ideal como regalo o decoración. ¡Sumá este erizo a tu colección y déjate conquistar por su ternura!",
           "measurements":"11 cm de alto y 8 cm en su punto más ancho (4,3 x 3,1 pulgadas).",
           "materials":"Hilo de algodón 100% de grosor medio.",
-          "skillLevel": "Principiantes.",
+          "skillLevel": "Principiantes",
           "image": "assets/products/hedgehog-heart.jpg"
         },
         {
@@ -34,29 +35,60 @@
           "description": "Este tierno gallito tejido sostiene un girasol, símbolo de luz y alegría. Está listo para iluminar cualquier espacio con su calidez. Hecho a mano con amor, es el regalo perfecto para sumar a tu colección de amigurumis.",
           "measurements":"6 cm de alto y 7 cm en su punto más ancho.",
           "materials":"Hilo de algodón 100% de grosor medio",
-          "skillLevel": "Principiantes.",
+          "skillLevel": "Principiantes",
           "image": "assets/products/rooster-flower.jpg"
         },
         {
           "id": 4,
           "title": "Dinosaurio",
-          "description": "¡Descubrí la magia de este adorable dinosaurio amigurumi! Es el compañero perfecto para aportar calidez y originalidad a cualquier espacio. ¡Agregalo a tu colección y dejate conquistar por su ternura!",
+          "description": "¡Descubrí la magia de este adorable dinosaurio amigurumi!.Es el compañero perfecto para aportar calidez y originalidad a cualquier espacio. ¡Agregalo a tu colección y dejate conquistar por su ternura!",
           "measurements":" Finished measurements: 18 cm de alto (7,0 pulgadas).",
-          "materials":"Materials: Hilo de chenilla grueso y súper suave",
-          "skillLevel": "Nivel de dificultad: Principiantes.",
+          "materials":"Hilo de chenilla grueso y súper suave",
+          "skillLevel": "Principiantes",
           "image": "assets/products/dinosaur.jpg"
-      }
-      ]
+      },
+      {
+        "id": 5,
+        "title": "Elefante sosteniendo un corazon",
+        "description": "Este tierno elefante amigurumi representa el amor y la dulzura en cada puntada. Es el regalo ideal para ocasiones especiales, una encantadora decoración o un compañero que alegra el día.",
+        "measurements": "15 cm (5,9 pulgadas) de alto incluyendo el corazón",
+         "materials": "Hilo de algodón 100% de grosor medio",
+         "skillLevel": "Principiantes",
+        "image": "assets/products/elephant.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Vaca",
+      "description": "Esta suave vaca tejida a mano está llena de encanto y dulzura. Fácil de realizar y perfecta para principiantes, es ideal como regalo, decoración o para darle un toque especial a cualquier colección. ¡No te pierdas la oportunidad de sumarla a tu mundo del crochet!",
+      "measurements": "23 cm de alto (9,0 pulgadas)",
+      "materials": "Hilo de felpa gruesa y muy suave",
+      "skillLevel": "Principiantes",
+      "image": "assets/products/cow.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Hongo",
+      "description": "Este hongo de chenille suave es un proyecto de crochet sencillo y adorable, perfecto para principiantes o para quienes buscan una creación relajante y divertida. ¡Agrega un toque de encanto a cualquier espacio y no te pierdas esta pequeña joya!",
+      "measurements": "25 cm de alto (9,8 pulgadas)",
+      "materials": "Hilo de chenille grueso y muy suave",
+      "skillLevel": "Principiantes",
+      "image": "assets/products/mushroom.jpg"
+    }
+    
+  ]
+  },
+  "Header": {
+    "description1": "Creamos, probamos y ofrecemos ",
+    "description2": "patrones únicos " ,
+    "description3": "para potenciar tus ideas "
   },
   "AboutMe": {
         "title": "Sobre mí",
         "presentation":"¡Hola! Soy Mariana, una apasionada del crochet",
-        "description1": "Nací y vivo en Argentina, donde además estudio Licenciatura en Ciencias Biológicas.",
-        "description2": "Mi mundo está lleno de inspiración: adoro el otoño, ese momento mágico en el que la naturaleza se viste de colores cálidos; disfruto de paseos por la playa junto a mis amigas, de saborear una buena taza de té, de sumergirme en películas y libros, y de compartir momentos especiales con mi querida perrita Kira y mi gatito Teo",
-        "description3": "Empecé a tejer a crochet hace años y lo que comenzó como un hobby se transformó en una forma de vida. Cada puntada, cada diseño, está hecho con mucho cariño y dedicación, buscando siempre transmitir la esencia de mi pasión por el arte y la creatividad.",
-        "description4": "En esta página encontrarás patrones cuidadosamente diseñados, pensados para que tanto principiantes como expertos disfruten creando piezas llenas de encanto y personalidad. Mi compromiso es ofrecerte un trabajo de calidad que te inspire y te haga sentir acompañado en cada proyecto.",
-        "description5":"¡Gracias por visitar mi espacio! Espero que disfrutes explorando mis creaciones tanto como yo disfruto tejiendolas para ti.",
-        "caption": "Mis ayudantes Kira y Teo"
+        "description1": "Nací y vivo en Argentina, donde también estudio Licenciatura en Ciencias Biológicas.",
+        "description2": "Encuentro inspiración en los pequeños momentos: el otoño con sus colores cálidos, paseos por la playa con amigas, una buena taza de té, películas, libros, y el cariño de mi perrita Kira y mi gatito Teo.",
+        "description3": "Empecé a tejer a crochet hace años y, con el tiempo, se convirtió en una forma de vida. Cada puntada y diseño nace del amor por el arte y la creatividad.",
+        "description4": "En esta página vas a encontrar patrones pensados para que tanto principiantes como expertos disfruten creando piezas con encanto y personalidad. Mi compromiso es ofrecerte calidad e inspiración en cada proyecto."
     }, 
     "Services": {
     "title": "Lo que ofrezco",
@@ -122,7 +154,7 @@
           "title": "Pagos",
           "items": [
             {
-              "question": "¿En qué moneda están los precios?",
+              "question": "¿En qué moneda se encuentran los precios?",
               "answer": "Si resides en Argentina, el pago se realiza en pesos argentinos (ARS) a través de Mercado Pago. Para compras internacionales, el pago se efectúa en dólares estadounidenses (USD) mediante PayPal."
             },
             {
