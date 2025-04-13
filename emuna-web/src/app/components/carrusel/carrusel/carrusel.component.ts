@@ -14,29 +14,32 @@ import { TranslationService } from '../../../services/translation.service';
 })
 
 
-
 export class CarruselComponent implements OnInit{
-  description1: string='';
-  description2: string='';
-  description3: string='';
-
-  imageList = [
-    '../../../../assets/carrousel/image1.jpg',
-    '../../../../assets/carrousel/image2.jpg'
-  ]
-
-  currentImages: string[] = [this.imageList[0], this.imageList[1]];
-
+  lang: string= '';
   langSubscription: Subscription | undefined;
+  textoItem1: string = this.lang === 'es' 
+  ? 'Descubre el arte del crochet, donde cada punto cuenta una historia' 
+  : 'Discover the art of crochet, where every stitch tells a story';
 
-  constructor(private translationService: TranslationService,
-    private translate: TranslateService
-  ) {}
+texto2Item1: string = this.lang === 'es' 
+  ? 'y transforma hilos en sueños tejidos con tus manos' 
+  : 'and turn threads into dreams crafted by your hands';
+
+textoItem2: string = this.lang === 'es' 
+  ? 'Explora patrones únicos y creativos' 
+  : 'Explore unique and creative patterns';
+
+texto2Item2: string = this.lang === 'es' 
+  ? 'que despertarán tu inspiración y amor por lo hecho a mano' 
+  : 'that awaken your inspiration and love for handmade beauty';
+
+  constructor(private translationService: TranslationService, private translate: TranslateService) {}
 
   ngOnInit(): void {
-    this.loadItems();
+    this.lang= this.translationService.getCurrentLang();
+    
     this.langSubscription = this.translate.onLangChange.subscribe(() => {
-      this.loadItems();
+      this.lang= this.translationService.getCurrentLang();
     });
   }
 
@@ -44,20 +47,6 @@ export class CarruselComponent implements OnInit{
     this.langSubscription?.unsubscribe();
   }
 
+ 
 
-  getCurrentLang(): string {
-    return this.translate.currentLang || 'en';
-  }
-
-  loadItems(): void {
-   forkJoin([
-              from(this.translationService.translate('Header.description1')),
-              from(this.translationService.translate('Header.description2')),
-              from(this.translationService.translate('Header.description3')),
-            ]).subscribe(([description1, description2,description3]) => {
-              this.description1=description1;
-              this.description2=description2;
-              this.description3=description3;
-            });
-  }
 }

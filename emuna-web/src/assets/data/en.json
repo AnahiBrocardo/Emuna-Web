@@ -8,10 +8,21 @@
     "contact": "Contact"
   },
   "Header": {
-    "description1": "We create, test, and offer ",
-    "description2": "unique patterns " ,
-    "description3": "to empower your ideas"
-  },
+  "items": [
+    {
+      "description1": "I design and test every detail,",
+      "description2": "to bring your ideas to life ",
+      "description3": "with creativity, care, and precision",
+      "image":  "assets/carrousel/image.jpg"
+    },
+    {
+      "description1": "Discover the world of crochet,",
+      "description2": "with patterns made just for you ",
+      "description3": "and start creating with your own hands",
+      "image":  "assets/carrousel/image1.jpg"
+    }
+  ]
+},
     "Products": {
       "notes": "Crochet pattern only. NOT a finished toy- For more information, ",
       "notes2": "Please note that cancellations and refunds for digital patterns will not be accepted after purchase.",

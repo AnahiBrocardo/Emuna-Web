@@ -78,9 +78,20 @@
   ]
   },
   "Header": {
-    "description1": "Creamos, probamos y ofrecemos ",
-    "description2": "patrones únicos " ,
-    "description3": "para potenciar tus ideas "
+  "items": [
+    {
+      "description1": "Diseño y pruebo cada detalle,",
+      "description2": "para que tus ideas cobren vida ",
+      "description3": "con creatividad, cuidado y precisión",
+      "image":  "assets/carrousel/image.jpg"
+    },
+    {
+      "description1": "Descubrí el mundo del crochet,",
+      "description2": "con patrones pensados para vos ",
+      "description3": "y empezá a crear con tus propias manos",
+      "image":  "assets/carrousel/image1.jpg"
+    }
+  ]
   },
   "AboutMe": {
         "title": "Sobre mí",

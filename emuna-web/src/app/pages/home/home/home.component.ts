@@ -3,11 +3,12 @@ import { AboutMeComponent } from '../../../components/about/about-me/about-me.co
 import { CarruselComponent } from '../../../components/carrusel/carrusel/carrusel.component';
 import { ServicesComponent } from '../../../components/services/services.component';
 import { ReviewsComponent } from '../../../components/reviews/reviews.component';
+import { WelcomeComponent } from '../../../components/about/welcome/welcome.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AboutMeComponent, CarruselComponent, ServicesComponent, ReviewsComponent],
+  imports: [AboutMeComponent, CarruselComponent, ServicesComponent, ReviewsComponent, WelcomeComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
