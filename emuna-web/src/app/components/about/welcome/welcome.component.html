@@ -1,28 +1,20 @@
-<section id="welcome">
-  <div class="w-[85vw] p-12 mx-auto relative border border-transparent rounded-lg">
-    
-    <!-- Línea dorada tenue y más larga arriba -->
-    <div class="border-t-2 border-gray-100 w-1/2 mx-auto mb-4 pt-4"></div>
-    
-    <!-- Título centrado en la parte superior -->
-    <h2 class="text-4xl font-bold text-gray-700 mb-6 text-center z-10">
-      WELCOME TO <span class="text-[#df4d49]">EMUNA</span>
+<section id="welcome" class=" py-20 text-center mt-14">
+  <div class="w-[90vw] max-w-4xl mx-auto px-4">
+ 
+    <div class="mx-auto w-[40%] h-px bg-gray-100 mb-14 animate__animated animate__fadeIn animate__delay-1s"></div>
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#d5a1a1] tracking-wide mb-6 animate__animated animate__fadeIn animate__delay-1s">
+      {{ lang === 'en' ? titleEN : titleES }}
     </h2>
-    
-    <!-- Contenedor de texto con padding -->
-    <div class="w-full text-center z-10 relative max-w-screen-lg mx-auto">
-      <p class="text-xl text-gray-600 leading-relaxed font-sans mb-4">
-        Bienvenido a Emuna, un espacio donde el arte del crochet se convierte en una experiencia única. 
-      </p>
-      <p class="text-xl text-gray-600 leading-relaxed font-sans mb-4">
-        Aquí puedes descubrir patrones que te invitarán a transformar hilos en arte, explorar tu creatividad y crear piezas únicas con tus propias manos.
-      </p>
-      <p class="text-xl text-gray-500 leading-relaxed font-sans font-semibold mb-4">
-        ¡Descubre lo que podemos tejer juntos!
-      </p>
-    </div>
 
-    <!-- Línea dorada tenue y más larga abajo -->
-    <div class="border-b-2 border-gray-100 w-1/2 mx-auto mt-4 pb-6"></div>
+
+    <p class="text-xl sm:text-2xl md:text-3xl font-bold text-gray-500 tracking-wide mb-6 animate__animated animate__fadeIn animate__delay-2s">
+      {{ lang === 'en' ? descriptionEN : descriptionES }}
+    </p>
+
+ 
+    <p class="text-lg sm:text-xl text-gray-500 tracking-wider italic mt-4 animate__animated animate__fadeIn animate__delay-3s">
+      {{ lang === 'en' ? noteEN : noteES }}
+    </p>
+    <div class="mx-auto w-[40%] h-px bg-gray-100 mt-14 animate__animated animate__fadeIn animate__delay-1s"></div>
   </div>
 </section>

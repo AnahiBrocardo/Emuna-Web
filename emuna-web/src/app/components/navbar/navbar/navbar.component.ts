@@ -60,8 +60,8 @@ export class NavbarComponent implements OnInit{
     this.router.navigate(['/questions']);
   }
   
-  navigateToHome():void{
-    this.router.navigate(['']);
+  navigateToHome(): void {
+    this.router.navigate(['']).then(() => {});
   }
   getCurrentLang(): string {
     return this.translationService.getCurrentLang();

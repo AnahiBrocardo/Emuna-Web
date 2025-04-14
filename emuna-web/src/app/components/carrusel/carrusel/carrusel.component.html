@@ -1,56 +1,32 @@
-<section  class=" bg-[#faedeb]">
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-  <div class="relative h-[90vh] overflow-hidden rounded-lg md:h-[95vh]">
-
-    <!-- Slide 1 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <div class="relative w-full h-full">
-        <img src="assets/carrousel/image.jpg" class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
+<section class="bg-[#faedeb]">
+  <div id="default-carousel" class="relative w-full shadow-lg shadow-gray-500">
+    <div class="relative h-[90vh] rounded-lg md:h-[90vh]">
+      <div class="carousel-item absolute w-full h-full transition-opacity duration-700 ease-in-out opacity-0" *ngFor="let slide of slides; let i = index" [class.opacity-100]="i === currentIndex">
+        <img [src]="slide.img" class="absolute block w-full h-full object-cover top-0 left-0" />
         <div class="absolute top-0 left-0 w-full h-full bg-gray-800/50 z-10"></div>
-        
-        <!-- TEXTO -->
-        <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-20 px-4 gap-2">
-          <h2 class="text-white text-xl md:text-2xl font-semibold text-center">{{textoItem1}}</h2>
-          <h2 class="text-white text-xl md:text-2xl font-semibold text-center">{{texto2Item1}}</h2>
+        <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-20 px-6 gap-3">
+          <h2 class="text-white font-medium text-2xl md:text-3xl text-center">
+            {{ lang === 'en' ? slide.textEN : slide.textES }}
+          </h2>
+          <h2 class="text-white font-medium  text-xl md:text-2xl text-center">
+            {{ lang === 'en' ? slide.subtextEN : slide.subtextES }}
+          </h2>
         </div>
       </div>
     </div>
 
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <div class="relative w-full h-full">
-        <img src="assets/carrousel/image1.jpg" class="absolute block w-full h-full object-cover top-0 left-0" alt="...">
-        <div class="absolute top-0 left-0 w-full h-full bg-gray-800/50 z-10"></div>
-        
-        <!-- TEXTO -->
-        <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-20 px-4 gap-2">
-          <h2 class="text-white text-xl md:text-2xl font-semibold text-center">{{textoItem2}}</h2>
-          <h2 class="text-white text-xl md:text-2xl font-semibold text-center">{{texto2Item2}}</h2>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-
-  <!-- Puntos de navegación -->
-  <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-    <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-    <button type="button" class="w-3 h-3 rounded-full bg-white/70" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-  </div>
-
-  <!-- Botón anterior -->
-  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer" data-carousel-prev>
-    <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+    <button (click)="prevSlide()"
+    class="absolute top-1/2 left-4 z-30 -translate-y-1/2 p-3 rounded-full bg-white/30 text-white hover:bg-white/70 hover:text-gray-800 transition duration-300 shadow-lg">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
     </svg>
-    <span class="sr-only">Previous</span>
   </button>
-
-  <!-- Botón siguiente -->
-  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer" data-carousel-next>
-    <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+  
+  <button (click)="nextSlide()"
+    class="absolute top-1/2 right-4 z-30 -translate-y-1/2 p-3 rounded-full bg-white/30 text-white hover:bg-white/70 hover:text-gray-800 transition duration-300 shadow-lg">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
     </svg>
-    <span class="sr-only">Next</span>
   </button>
-</div>
+  </div>
 </section>

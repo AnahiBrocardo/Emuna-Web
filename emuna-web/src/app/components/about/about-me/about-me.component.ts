@@ -10,7 +10,7 @@ import { forkJoin, from } from 'rxjs';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.css'
 })
-export class AboutMeComponent implements OnInit, AfterViewInit{
+export class AboutMeComponent implements OnInit{
   title: string= '';
   presentation: string ='';
   description1: string='';
@@ -31,25 +31,7 @@ export class AboutMeComponent implements OnInit, AfterViewInit{
     });
   }
 
-  ngAfterViewInit(): void {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible'); 
-          }
-        });
-      },
-      {
-        threshold: 0.3
-      }
-    );
-  
-    const elements = document.querySelectorAll('.img-fade');
-    elements.forEach(el => observer.observe(el));
-  }
+
   loadData(): void{
    forkJoin([
            from(this.translationService.translate('AboutMe.title')),
@@ -66,6 +48,25 @@ export class AboutMeComponent implements OnInit, AfterViewInit{
            this.description3=description3;
            this.description4=description4;
          });
+         setTimeout(() => this.initFadeInObserver(), 0);
   }
-     
+
+  initFadeInObserver(): void {
+    const images = document.querySelectorAll('.fade-in');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show'); // <- se quita si sale de pantalla
+        }
+      });
+    }, {
+      threshold: 0.2,
+    });
+  
+    images.forEach(img => observer.observe(img));
+  }
+  
 }

@@ -1,13 +1,12 @@
-<section class="mt-20 w-[90vw] max-w-[1200px] mx-auto">
-
-  <h2 class="text-4xl font-bold text-gray-700 relative inline-block mb-6 w-fit">
+<section class="w-full max-w-[90vw] mx-auto mt-28">
+  <h2 class="text-4xl font-semibold text-gray-700 relative inline-block mb-6 w-fit">
     <span class="relative z-10 mb-4">{{title}}</span>
     <span class="absolute inset-x-0 bottom-1/2 translate-y-1/2 h-1/2 bg-[#faedeb] -z-10 rounded-md"></span>
   </h2>
 
-  <p class="text-lg text-gray-700 mb-4">{{ description }}</p>
+  <p class="text-lg text-gray-700 mb-8">{{ description }}</p>
 
-  <div class="space-y-1 border border-gray-300 rounded-lg p-4 w-full sm:w-[90vw] md:w-[70vw]">
+  <div class="space-y-4 border border-gray-300 rounded-lg p-2 w-full sm:w-[90vw] md:w-[70vw]">
     <div class="flex items-center justify-between text-sm px-4 py-1 gap-2">
       <span class="font-medium text-gray-800">{{ ratingTitle1 }}</span>
       <span class="font-semibold text-yellow-500">4.9/5</span>
@@ -26,28 +25,26 @@
     </div>
   </div>
 
-  <p class="text-xs text-gray-700 mt-2">{{ note }}</p>
+  <p class="text-xs text-gray-700 mt-4">{{ note }}</p>
 
   <div class="mt-8 relative">
     <button
       (click)="prevImage()"
-      class="absolute left-2 top-1/2 -translate-y-1/2 bg-white hover:bg-pink-100 p-2 rounded-full shadow z-10"
+      class="absolute left-2 text-gray-700 shadow top-1/2 -translate-y-1/2 bg-white hover:bg-pink-100 p-2 rounded-full  z-10"
       aria-label="Anterior"
     >
       ◀
     </button>
 
-    <!-- Botón siguiente -->
     <button
       (click)="nextImage()"
-      class="absolute right-2 top-1/2 -translate-y-1/2 bg-white hover:bg-pink-100  p-2 rounded-full shadow z-10"
+      class="absolute right-2 text-gray-700 shadow top-1/2 -translate-y-1/2 bg-white hover:bg-pink-100 p-2 rounded-full  z-10"
       aria-label="Siguiente"
     >
       ▶
     </button>
 
-    <!-- Carrusel -->
-    <div class="overflow-hidden">
+    <div class="overflow-hidden ">
       <div
         class="flex transition-transform duration-300 ease-in-out"
         [ngStyle]="{
@@ -56,7 +53,7 @@
       >
         <div
           *ngFor="let image of reviewImages"
-          class="flex-shrink-0 px-2"
+          class="flex-shrink-0 px-4"
           [ngStyle]="{ width: 100 / visibleCount + '%' }"
         >
           <img
