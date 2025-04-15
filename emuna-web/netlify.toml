@@ -1,9 +1,0 @@
-[build]
-  base = "emuna-web"
-  publish = "emuna-web/dist/emuna-web"
-  command = "npm run build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
