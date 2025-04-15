@@ -6,6 +6,7 @@ import { TranslationService } from '../../services/translation.service';
 import { TranslateService } from '@ngx-translate/core';
 import { forkJoin, from } from 'rxjs';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -179,19 +180,19 @@ export class ContactComponent implements OnInit{
         email: this.contactForm.get('email')?.value,
         subject: this.contactForm.get('subject')?.value,
         message: this.contactForm.get('message')?.value,
-        image: this.contactForm.get('imageUrl')?.value || ''
+        imageUrl: this.contactForm.get('imageUrl')?.value || ''
       };
     
       emailjs.send(
-        'service_m05lske',
-        'template_5wiurmf',
+        environment.emailjs.serviceID,
+        environment.emailjs.templateID,
         emailData,
-        { publicKey: 'xC-ELT_JUavCDsViQ' }
+        { publicKey: environment.emailjs.publicKey }
       ).then(() => {
         Swal.fire({
         icon: 'success',
         title: lang === 'en' ? 'Message sent!' : '¡Mensaje enviado!',
-        text: lang === 'en' ? 'We will contact you soon.' : 'Nos contactaremos pronto con vos.',
+        text: lang === 'en' ? 'We will contact you soon.' : 'Nos contactaremos pronto.',
         confirmButtonColor: '#3085d6',
         });
         this.resetForm();
@@ -205,7 +206,7 @@ export class ContactComponent implements OnInit{
       : 'Hubo un problema al enviar el mensaje. Intentá nuevamente más tarde.',
         });
       });
-    
+  
   }
 
   resetForm(): void {
@@ -235,9 +236,8 @@ export class ContactComponent implements OnInit{
       this.imageError = null;
     } else {
       this.imagePreviewUrl = null;
-      this.imageError = 'El formato de imagen no es válido. Usá una URL que termine en .jpg, .jpeg, .png o .webp.';
-    }
-     
+      this.imageError = '.jpg, .jpeg, .png o .webp.';
+    }     
   }
   
 }
